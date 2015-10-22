@@ -4,3 +4,6 @@
   box-sizing: border-box;
   position: relative;
 }
+body {
+  background-color: #f3f4f1;
+}
