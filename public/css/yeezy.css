@@ -9,6 +9,9 @@
 body {
   background-color: #f2f2f0;
 }
+body.not-home {
+  margin-top: 60px;
+}
 .wrap {
   max-width: 64em;
   width: 100%;
@@ -31,6 +34,8 @@ button:hover {
 }
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 50px;
   background-color: #333;

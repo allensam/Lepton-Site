@@ -20,10 +20,13 @@
 @yeezyDarkGray: #8b8b8b;
 
 @gridWidth: 64em;
+@navHeight: 50px;
 
 body {
   background-color: @yeezyWhite;
-
+  &.not-home {
+    margin-top: @navHeight + 10px;
+  }
 }
 
 .wrap {
@@ -52,10 +55,10 @@ button {
   }
 }
 
-@navHeight: 50px;
-
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: @navHeight;
   background-color: #333;
