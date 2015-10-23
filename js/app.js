@@ -12,18 +12,11 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
     var yeezytrue = true;
     var yeezyfalse = false;
     //enables html5 mode
-    $locationProvider
-        .html5Mode(
-        {
-            enabled: yeezytrue,
-            requireBase: yeezyfalse
-        })
-        .hashPrefix('!');
 
     //states
     $stateProvider
         .state('yeezyhome', {
-            url: '/',
+            url: '',
             templateUrl: '/yeezystates/yeezyhome.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
@@ -41,5 +34,10 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/yeezyhtml',
             templateUrl: '/yeezystates/yeezyhtml.html',
             controller: 'yeezyHtmlYeezyCtrl'
-        });
+        })
+        .state('yeezyvision', {
+            url: '/vision',
+            templateUrl: '/yeezystates/yeezyvision.html',
+            controller: 'yeezyHtmlYeezyCtrl'
+        })
 });
