@@ -1,9 +1,10 @@
 <div class="wrap">
   <div class="col-3 sidebar">
-    <ul>
-      <li><a ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
-      <li><a ui-sref="yeezysidebar.yeezyangular()">Angular</a></li>
-      <li><a ui-sref="yeezysidebar.yeezyhtml()">HTML</a></li>
+    <ul ng->
+        <!--ng-class chages css font weight to bold havent tested it yet need to compile less-->
+      <li><a ng-class="{bold: $state.includes('yeezysidebar.yeezyintro')}" ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
+      <li><a ng-class="{bold: $state.includes('yeezysidebar.yeezyangular')}" ui-sref="yeezysidebar.yeezyangular()">Angular</a></li>
+      <li><a ng-class="{bold: $state.includes('yeezysidebar.yeezyhtml')}" ui-sref="yeezysidebar.yeezyhtml()">HTML</a></li>
     </ul>
   </div>
   <div class="col-9" ui-view>
