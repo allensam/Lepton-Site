@@ -22,11 +22,11 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
         })
         .state('yeezysidebar', {
             abstract: yeezytrue,
-            url: '/learnyeezycode',
+            url: '/learn',
             templateUrl: '/yeezystates/yeezysidebar.html'
         })
         .state('yeezysidebar.yeezyangular', {
-            url: '/yeezyangular',
+            url: '/angular',
             templateUrl: '/yeezystates/yeezyangular.html',
             controller: 'yeezyAngularYeezyCtrl'
         })

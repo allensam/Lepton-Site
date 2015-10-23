@@ -91,3 +91,10 @@ nav .links {
 #yeezyhead .content button:hover {
   background-color: #ae010d;
 }
+.col-3 {
+  width: 25%;
+  display: inline-block;
+}
+.col-8 {
+  width: 75%;
+}
