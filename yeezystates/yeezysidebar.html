@@ -1,11 +1,12 @@
-<div class="col-3 sidebar">
-  Testing
-  <ul>
-    <li><button ui-sref="yeezysidebar.yeezyintro()">Yeezy Introduction</button></li>
-    <li><button ui-sref="yeezysidebar.yeezyangular()"></button></li>
-    <li><button ui-sref="yeezysidebar.yeezyhtml()"></button></li>
-  </ul>
-</div>
-<div ui-view>
+<div class="wrap">
+  <div class="col-3 sidebar">
+    <ul>
+      <li><a ui-sref="yeezysidebar.yeezyintro()">Yeezy Introduction</a></li>
+      <li><a ui-sref="yeezysidebar.yeezyangular()">Angular</a></li>
+      <li><a ui-sref="yeezysidebar.yeezyhtml()">HTML</a></li>
+    </ul>
+  </div>
+  <div class="col-9" ui-view>
 
+  </div>
 </div>

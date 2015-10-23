@@ -31,7 +31,10 @@ body {
 .wrap {
   max-width: @gridWidth;
   width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: no-wrap;
 
 }
 
@@ -61,6 +64,11 @@ nav {
   width: 100vw;
   height: @navHeight;
   background-color: #333;
+
+  .wrap {
+    display: block;
+    padding: 0;
+  }
 
   z-index: 9999;
 
@@ -129,11 +137,78 @@ nav {
 }
 
 .col-3 {
-  width: 25%;
+  max-width: ~"calc(25% - 10px)";
   display: inline-block;
+  flex: 1;
+  margin-right: 10px;
 }
 
-.col-8 {
-  width: 75%;
+.col-9 {
+  max-width: 75%;
+  display: inline-block;
+  flex: 1;
+}
+
+.sidebar {
+
+  ul {
+    list-style-type: none;
+    border-radius: 5px;
+    border: 1px solid @yeezyGray;
+
+    li {
+      width: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: @yeezyGray;
+        z-index: 0;
+
+        transition: width 0.3s;
+
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+      
+      a {
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        text-decoration: none;
+        color: #333;
+        transition: all 0.3s;
+        
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          background-color: @yeezyGray;
+          z-index: 0;
+
+          transition: width 0.3s;
+
+        }
+
+        &:hover {
+          // color: @yeezyWhite;
+        }
+
+      }
+    }
+  }
 }
 

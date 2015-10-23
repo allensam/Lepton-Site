@@ -13,7 +13,10 @@ body {
 .wrap {
   max-width: 64em;
   width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: no-wrap;
 }
 h1 {
   letter-spacing: 1px;
@@ -38,6 +41,10 @@ nav {
   height: 50px;
   background-color: #333;
   z-index: 9999;
+}
+nav .wrap {
+  display: block;
+  padding: 0;
 }
 nav a {
   color: #d0d0d0;
@@ -92,9 +99,56 @@ nav .links {
   background-color: #ae010d;
 }
 .col-3 {
-  width: 25%;
+  max-width: calc(25% - 10px);
   display: inline-block;
+  flex: 1;
+  margin-right: 10px;
 }
-.col-8 {
-  width: 75%;
+.col-9 {
+  max-width: 75%;
+  display: inline-block;
+  flex: 1;
+}
+.sidebar ul {
+  list-style-type: none;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+}
+.sidebar ul li {
+  width: 100%;
+}
+.sidebar ul li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #d0d0d0;
+  z-index: 0;
+  transition: width 0.3s;
+}
+.sidebar ul li:hover:before {
+  width: 100%;
+}
+.sidebar ul li a {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+}
+.sidebar ul li a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #d0d0d0;
+  z-index: 0;
+  transition: width 0.3s;
 }
