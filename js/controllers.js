@@ -1,16 +1,5 @@
 var yeezyCtrl = angular.module('yeezy.controllers', []);
 
-yeezyCtrl.controller('yeezySideBarCtrl', function ($scope) {
-    var classes = {
-        intro: false,
-        angular: false,
-        html: false
-    };
-    $scope.applyBoldClass = function () {
-
-    }
-});
-
 yeezyCtrl.controller('yeezyHomeYeezyCtrl', function () {
 
 });
