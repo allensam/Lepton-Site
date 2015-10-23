@@ -46,6 +46,16 @@ h1 {
   letter-spacing: 1px;
 }
 
+a {
+  color: @yeezyRed;
+  
+  transition: all 0.3s;
+
+  &:hover {
+    color: @yeezyDarkRed;
+  }
+}
+
 button {
   cursor: pointer;
   background-color: @yeezyRed;
@@ -90,6 +100,7 @@ nav {
 
     &:hover {
       border-bottom-width: 3px;
+      color: @yeezyGray;
     }
 
     &.home {

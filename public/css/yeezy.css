@@ -24,6 +24,13 @@ body {
 h1 {
   letter-spacing: 1px;
 }
+a {
+  color: #fa0213;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #ae010d;
+}
 button {
   cursor: pointer;
   background-color: #fa0213;
@@ -62,6 +69,7 @@ nav a {
 }
 nav a:hover {
   border-bottom-width: 3px;
+  color: #d0d0d0;
 }
 nav a.home {
   font-weight: bolder;
