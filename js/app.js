@@ -12,17 +12,11 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
     var yeezytrue = true;
     var yeezyfalse = false;
     //enables html5 mode
-    $locationProvider
-        .html5Mode(
-        {
-            requireBase: yeezyfalse
-        })
-        .hashPrefix('!');
 
     //states
     $stateProvider
         .state('yeezyhome', {
-            url: '/',
+            url: '',
             templateUrl: '/yeezystates/yeezyhome.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
