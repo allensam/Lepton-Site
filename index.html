@@ -3,13 +3,24 @@
 <html lang="en" ng-app="yeezy">
 
 <head>
+    <!--yeezysetup-->
     <meta charset="UTF-8">
     <title>How-Yeezy_codes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <!--angular ui router-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!--yeezy js-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 </head>
 
 <body>
-    <section ng-view></section>
+    <section ui-view></section>
 </body>
 
 </html>
