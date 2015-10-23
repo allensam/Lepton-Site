@@ -1,8 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 // Yeezy Colors
@@ -19,17 +22,23 @@ body {
 
 }
 
-section {
+.wrap {
   max-width: @gridWidth;
   width: 100%;
   margin: 0 auto;
 
 }
 
+h1 {
+  letter-spacing: 1px;
+}
+
 button {
   cursor: pointer;
   background-color: @yeezyOrange;
   border: none;
+  border-radius: 5px;
+  min-width: 150px;
   padding: 10px;
   color: @yeezyWhite;
 
@@ -37,5 +46,67 @@ button {
 
   &:hover {
     background-color: @yeezyDarkOrange;
+  }
+}
+
+@navHeight: 50px;
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: @navHeight;
+  background-color: #333;
+
+  z-index: 9999;
+
+  a {
+    color: @yeezyWhite;
+    line-height: @navHeight;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 10px;
+
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: lighten(#333, 10);
+    }
+  }
+}
+
+#yeezyhead {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/yeezy-code-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: @yeezyWhite;
+    text-align: center;
+
+    h1 {
+      font-size: 62px;
+      margin: 15px 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    button {
+      background-color: @yeezyRed;
+      font-size: 16px;
+
+
+      &:hover {
+        background-color: @yeezyDarkRed;
+      }
+    }
+
   }
 }

@@ -1,25 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background-color: #f3f4f1;
 }
-section {
+.wrap {
   max-width: 64em;
   width: 100%;
   margin: 0 auto;
+}
+h1 {
+  letter-spacing: 1px;
 }
 button {
   cursor: pointer;
   background-color: #f2ab28;
   border: none;
+  border-radius: 5px;
+  min-width: 150px;
   padding: 10px;
   color: #f3f4f1;
   transition: all 0.3s;
 }
 button:hover {
   background-color: #bd671b;
+}
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  background-color: #333;
+  z-index: 9999;
+}
+nav a {
+  color: #f3f4f1;
+  line-height: 50px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: all 0.3s;
+}
+nav a:hover {
+  background-color: #4d4d4d;
+}
+#yeezyhead {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/yeezy-code-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#yeezyhead .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f3f4f1;
+  text-align: center;
+}
+#yeezyhead .content h1 {
+  font-size: 62px;
+  margin: 15px 0;
+  margin-bottom: 0;
+}
+#yeezyhead .content p {
+  margin: 15px 0;
+}
+#yeezyhead .content button {
+  background-color: #8e2511;
+  font-size: 16px;
+}
+#yeezyhead .content button:hover {
+  background-color: #3d0c06;
 }
