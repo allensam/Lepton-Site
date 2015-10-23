@@ -10,6 +10,9 @@ body {
   background-color: #f2f2f0;
   margin-top: 50px;
 }
+.bold {
+  font-weight: bold;
+}
 .wrap {
   max-width: 64em;
   width: 100%;
@@ -141,7 +144,8 @@ nav .links {
   z-index: 0;
   transition: width 0.3s;
 }
-.sidebar ul li:hover:before {
+.sidebar ul li:hover:before,
+.sidebar ul li.active:before {
   width: 100%;
 }
 .sidebar ul li a {
