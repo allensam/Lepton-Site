@@ -133,17 +133,25 @@ nav {
       border-bottom: 3px solid @yeezyGray;
       // border-radius: 5px;
       
-      margin-top: -5px;
+      margin-top: -8px;
       width: 10px;
       height: 10px;
+
+      transition: all 0.3s;
       
-      transform: rotate(-45deg) translateY(-50%);
+      transform: rotate(-45deg);
+      transform-origin: center;
     }
 
     &:hover, &:focus, &:active {
       ul {
         top: @navHeight - 2;
       }
+
+      &:after {
+        transform: rotate(135deg);
+      }
+
     }
 
 
