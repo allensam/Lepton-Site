@@ -9,11 +9,15 @@
 }
 
 // Yeezy Colors
-@yeezyWhite: #F3F4F1;
-@yeezyOrange: #F2AB28;
-@yeezyDarkOrange: #BD671B;
-@yeezyRed: #8E2511;
-@yeezyDarkRed: #3D0C06;
+@yeezyWhite: #F2F2F0;
+@yeezyOrange: #F54702;
+@yeezyDarkOrange: darken(@yeezyOrange, 5);
+@yeezyRed: #FA0213;
+@yeezyDarkRed: darken(@yeezyRed, 15);
+@yeezyBlue: #09131C;
+
+@yeezyGray: #D0D0D0;
+@yeezyDarkGray: #8b8b8b;
 
 @gridWidth: 64em;
 
@@ -35,17 +39,16 @@ h1 {
 
 button {
   cursor: pointer;
-  background-color: @yeezyOrange;
+  background-color: @yeezyRed;
   border: none;
   border-radius: 5px;
-  min-width: 150px;
   padding: 10px;
   color: @yeezyWhite;
 
   transition: all 0.3s;
 
   &:hover {
-    background-color: @yeezyDarkOrange;
+    background-color: @yeezyDarkRed;
   }
 }
 
@@ -60,23 +63,26 @@ nav {
   z-index: 9999;
 
   a {
-    color: @yeezyWhite;
+    color: @yeezyGray;
     line-height: @navHeight;
+    height: @navHeight;
     display: inline-block;
     text-decoration: none;
     padding: 0 10px;
+    border-bottom: 0px solid @yeezyGray;
+    padding-bottom: 0px;
 
     transition: all 0.3s;
 
     &:hover {
-      background-color: lighten(#333, 10);
+      border-bottom-width: 1px;
     }
   }
 }
 
 #yeezyhead {
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/yeezy-code-bg.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/yeezy-alt-bg.jpg');
   background-size: cover;
   background-position: center;
 
@@ -101,7 +107,7 @@ nav {
     button {
       background-color: @yeezyRed;
       font-size: 16px;
-
+      min-width: 150px;
 
       &:hover {
         background-color: @yeezyDarkRed;
