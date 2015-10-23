@@ -8,9 +8,7 @@
 }
 body {
   background-color: #f2f2f0;
-}
-body.not-home {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .wrap {
   max-width: 64em;
@@ -55,8 +53,16 @@ nav a {
 nav a:hover {
   border-bottom-width: 3px;
 }
+nav a.home {
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+nav .links {
+  float: right;
+  display: inline-block;
+}
 #yeezyhead {
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/yeezy-alt-bg.jpg');
   background-size: cover;
   background-position: center;

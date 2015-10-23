@@ -24,9 +24,7 @@
 
 body {
   background-color: @yeezyWhite;
-  &.not-home {
-    margin-top: @navHeight + 10px;
-  }
+  margin-top: @navHeight;
 }
 
 .wrap {
@@ -80,11 +78,21 @@ nav {
     &:hover {
       border-bottom-width: 3px;
     }
+
+    &.home {
+      font-weight: bolder;
+      letter-spacing: 1px;
+    }
+  }
+
+  .links {
+    float: right;
+    display: inline-block;
   }
 }
 
 #yeezyhead {
-  height: 100vh;
+  height: ~"calc(100vh - @{navHeight})";
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/yeezy-alt-bg.jpg');
   background-size: cover;
   background-position: center;

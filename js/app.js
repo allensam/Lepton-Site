@@ -37,4 +37,9 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezyhtml.html',
             controller: 'yeezyHtmlYeezyCtrl'
         })
+        .state('yeezyvision', {
+            url: '/vision',
+            templateUrl: '/yeezystates/yeezyvision.html',
+            controller: 'yeezyHtmlYeezyCtrl'
+        })
 });
