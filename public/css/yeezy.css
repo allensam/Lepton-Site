@@ -79,8 +79,7 @@ nav .dropdown {
   z-index: 9999;
   cursor: pointer;
 }
-nav .dropdown:before {
-  content: 'Courses';
+nav .dropdown .drop-main {
   z-index: 9999;
   background-color: #333;
   display: inline-block;
@@ -92,6 +91,9 @@ nav .dropdown:before {
   padding: 0 10px;
   margin-top: -2px;
 }
+nav .dropdown .drop-main:hover {
+  border: none;
+}
 nav .dropdown:after {
   content: '';
   position: absolute;
@@ -99,6 +101,7 @@ nav .dropdown:after {
   right: 5px;
   border-left: 3px solid #d0d0d0;
   border-bottom: 3px solid #d0d0d0;
+  z-index: 9999;
   margin-top: -8px;
   width: 10px;
   height: 10px;

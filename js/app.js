@@ -29,7 +29,7 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
         })
         // learn intro
         .state('yeezysidebar.yeezyintro', {
-            url: '/angular',
+            url: '/',
             templateUrl: '/yeezypartials/yeezyintro.html'
         })
         // learn angular

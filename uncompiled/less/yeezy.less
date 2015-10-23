@@ -111,8 +111,7 @@ nav {
     z-index: 9999;
     cursor: pointer;
 
-    &:before {
-      content: 'Courses';
+    .drop-main {
       z-index: 9999;
       background-color: #333;
       display: inline-block;
@@ -123,6 +122,10 @@ nav {
       color: @yeezyGray;
       padding: 0 10px;
       margin-top: -2px;
+
+      &:hover {
+        border: none;
+      }
     }
     &:after {
       content: '';
@@ -132,6 +135,7 @@ nav {
       border-left: 3px solid @yeezyGray;
       border-bottom: 3px solid @yeezyGray;
       // border-radius: 5px;
+      z-index: 9999;
       
       margin-top: -8px;
       width: 10px;
