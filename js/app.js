@@ -27,14 +27,19 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezyhome.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
-        .state('yeezyangular', {
+        .state('yeezysidebar', {
+            abstract: yeezytrue,
+            url: '/learnyeezycode',
+            templateUrl: '/yeezystates/yeezysidebar.html'
+        })
+        .state('yeezysidebar.yeezyangular', {
             url: '/yeezyangular',
             templateUrl: '/yeezystates/yeezyangular.html',
             controller: 'yeezyAngularYeezyCtrl'
         })
-        .state('yeezyhtml', {
+        .state('yeezysidebar.yeezyhtml', {
             url: '/yeezyhtml',
             templateUrl: '/yeezystates/yeezyhtml.html',
             controller: 'yeezyHtmlYeezyCtrl'
-        })
+        });
 });
