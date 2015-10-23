@@ -102,6 +102,55 @@ nav {
     float: right;
     display: inline-block;
   }
+
+  .courses {
+    display: inline-block;
+  }
+  .dropdown {
+    width: 150px;
+    z-index: 9999;
+    cursor: pointer;
+
+    &:before {
+      content: 'Courses';
+      z-index: 9999;
+      background-color: #333;
+      display: inline-block;
+      width: 100%;
+      height: @navHeight;
+      vertical-align: middle;
+      line-height: @navHeight;
+      color: @yeezyGray;
+      padding: 0 10px;
+      margin-top: -2px;
+    }
+
+    &:hover, &:focus, &:active {
+      ul {
+        top: @navHeight - 2;
+      }
+    }
+
+
+    ul {
+      position: absolute;
+      top: -380px;
+      z-index: -1;
+      width: 150px;
+
+      padding: 0;
+      list-style-type: none;
+
+      transition: top 0.3s;
+
+      li {
+        a {
+          width: 100%;
+          background-color: #333;
+        }
+      }
+    }
+  }
 }
 
 #yeezyhead {
