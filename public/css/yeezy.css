@@ -7,3 +7,19 @@
 body {
   background-color: #f3f4f1;
 }
+section {
+  max-width: 64em;
+  width: 100%;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
+  background-color: #f2ab28;
+  border: none;
+  padding: 10px;
+  color: #f3f4f1;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: #bd671b;
+}

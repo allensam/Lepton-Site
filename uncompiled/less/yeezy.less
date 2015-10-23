@@ -12,7 +12,30 @@
 @yeezyRed: #8E2511;
 @yeezyDarkRed: #3D0C06;
 
+@gridWidth: 64em;
+
 body {
   background-color: @yeezyWhite;
-  
+
+}
+
+section {
+  max-width: @gridWidth;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+button {
+  cursor: pointer;
+  background-color: @yeezyOrange;
+  border: none;
+  padding: 10px;
+  color: @yeezyWhite;
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: @yeezyDarkOrange;
+  }
 }
