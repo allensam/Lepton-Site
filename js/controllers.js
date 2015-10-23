@@ -4,14 +4,14 @@ yeezyCtrl.controller('yeezyHomeYeezyCtrl', function () {
 
 });
 
-yeezyCtrl.controller('yeezyAngularYeezyCtrl', function () {
-    this.angularinfo = yeezyangular;
+yeezyCtrl.controller('yeezyAngularYeezyCtrl', function ($scope) {
+    $scope.products = yeezyangular;
     var yeezyangular = [{
-        name: 'Yeezy App',
-        description: "f"
+        name: 'Yeezy',
+        description: "ff"
 
     }, {
-        name: 'Yeezy Controllers',
+        name: 'Yeezfy',
         description: "f"
 
     }]
@@ -19,4 +19,15 @@ yeezyCtrl.controller('yeezyAngularYeezyCtrl', function () {
 
 yeezyCtrl.controller('yeezyHtmlYeezyCtrl', function () {
 
+});
+
+yeezyCtrl.controller('yeezySideBarCtrl', function ($scope) {
+    console.log('ran yeezysidebarctrl');
+    $scope.products = [{
+        name: 'YeezyApp',
+        description: "f"
+    }, {
+        name: 'YeezysControllers',
+        description: "f"
+    }];
 });

@@ -1,15 +1,20 @@
-<div class="wrap">
+<div ng-controller="yeezySideBarCtrl as sideBar" class="wrap">
   <div class="col-3 sidebar">
     <ul ng->
-        <!--ng-class chages css font weight to bold havent tested it yet need to compile less-->
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyintro')}"><a ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyangular')}"><a ui-sref="yeezysidebar.yeezyangular()">AngularJS</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyphp()">PHP</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezynode')}"><a ui-sref="yeezysidebar.yeezynode()">NodeJS</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyruby')}"><a ui-sref="yeezysidebar.yeezyruby()">Rubby</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezycss')}"><a ui-sref="yeezysidebar.yeezycss()">CSS</a></li>
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyhtml()">MORE TO COME</a></li>
+      <!--HTMl-->
       <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyhtml()">HTML</a></li>
+      <!--JavaScript stuff-->
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyintro')}"><a ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyhtml()">JavaScript</a></li>
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyangular')}"><a ui-sref="yeezysidebar.yeezyangular()">AngularJS</a></li>
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezynode')}"><a ui-sref="yeezysidebar.yeezynode()">NodeJS</a></li>
+      <!--Php stuff-->
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyphp()">PHP</a></li>
+      <!--Ruby-->
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyruby')}"><a ui-sref="yeezysidebar.yeezyruby()">Ruby</a></li>
+      <!--CSS-->
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezycss')}"><a ui-sref="yeezysidebar.yeezycss()">CSS</a></li>
+
     </ul>
   </div>
   <div class="col-9" ui-view>

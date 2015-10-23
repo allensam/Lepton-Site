@@ -1,7 +1,9 @@
 <body ui-view>
-  <h1>Angular</h1>    
-  <div ng-repeat="product in yeezyAngularYeezyCtrl.angularinfo">
-    <h3>{{product.name}}</h3><br>
-    <h5>{{product.description}}</h5>
+<div>
+  <h1>Angular</h1>
+  <div ng-repeat="product in products">
+    <span>{{product.name}}</span><br>
+    <p>{{product.description}}</p>
   </div>
+</div>
 </body>
