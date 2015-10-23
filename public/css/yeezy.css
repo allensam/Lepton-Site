@@ -16,7 +16,7 @@ body {
   margin: 0px auto;
   padding: 10px;
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
 }
 h1 {
   letter-spacing: 1px;
@@ -108,6 +108,18 @@ nav .links {
   max-width: 75%;
   display: inline-block;
   flex: 1;
+}
+@media (max-width: 560px) {
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .col-3,
+  .col-9 {
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+    display: block;
+  }
 }
 .sidebar ul {
   list-style-type: none;
