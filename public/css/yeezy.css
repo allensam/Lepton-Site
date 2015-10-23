@@ -102,7 +102,6 @@ nav .dropdown:after {
   margin-top: -8px;
   width: 10px;
   height: 10px;
-  transition: all 0.3s;
   transform: rotate(-45deg);
   transform-origin: center;
 }
@@ -110,11 +109,6 @@ nav .dropdown:hover ul,
 nav .dropdown:focus ul,
 nav .dropdown:active ul {
   top: 48px;
-}
-nav .dropdown:hover:after,
-nav .dropdown:focus:after,
-nav .dropdown:active:after {
-  transform: rotate(135deg);
 }
 nav .dropdown ul {
   position: absolute;
