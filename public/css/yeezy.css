@@ -48,7 +48,7 @@ nav a {
   transition: all 0.3s;
 }
 nav a:hover {
-  border-bottom-width: 1px;
+  border-bottom-width: 3px;
 }
 #yeezyhead {
   height: 100vh;
