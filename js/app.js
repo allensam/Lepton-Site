@@ -15,7 +15,6 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
     $locationProvider
         .html5Mode(
         {
-            enabled: yeezytrue,
             requireBase: yeezyfalse
         })
         .hashPrefix('!');
