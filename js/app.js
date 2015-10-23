@@ -31,7 +31,7 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             controller: 'yeezyAngularYeezyCtrl'
         })
         .state('yeezysidebar.yeezyhtml', {
-            url: '/yeezyhtml',
+            url: '/html',
             templateUrl: '/yeezystates/yeezyhtml.html',
             controller: 'yeezyHtmlYeezyCtrl'
         })
