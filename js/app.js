@@ -32,4 +32,9 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezyangular.html',
             controller: 'yeezyAngularYeezyCtrl'
         })
+        .state('yeezyhtml', {
+            url: '/yeezyhtml',
+            templateUrl: '/yeezystates/yeezyhtml.html',
+            controller: 'yeezyHtmlYeezyCtrl'
+        })
 });
