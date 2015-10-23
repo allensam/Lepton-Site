@@ -124,6 +124,21 @@ nav {
       padding: 0 10px;
       margin-top: -2px;
     }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      border-left: 3px solid @yeezyGray;
+      border-bottom: 3px solid @yeezyGray;
+      // border-radius: 5px;
+      
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      
+      transform: rotate(-45deg) translateY(-50%);
+    }
 
     &:hover, &:focus, &:active {
       ul {

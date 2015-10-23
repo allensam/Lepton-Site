@@ -92,6 +92,18 @@ nav .dropdown:before {
   padding: 0 10px;
   margin-top: -2px;
 }
+nav .dropdown:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  border-left: 3px solid #d0d0d0;
+  border-bottom: 3px solid #d0d0d0;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg) translateY(-50%);
+}
 nav .dropdown:hover ul,
 nav .dropdown:focus ul,
 nav .dropdown:active ul {
