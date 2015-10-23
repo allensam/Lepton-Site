@@ -1,10 +1,10 @@
 <div ng-controller="yeezySideBarCtrl as sideBar" class="wrap">
   <div class="col-3 sidebar">
     <ul ng->
+      <li ng-class="{active: $state.includes('yeezysidebar.yeezyintro')}"><a ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
       <!--HTMl-->
       <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyhtml()">HTML</a></li>
       <!--JavaScript stuff-->
-      <li ng-class="{active: $state.includes('yeezysidebar.yeezyintro')}"><a ui-sref="yeezysidebar.yeezyintro()">Introduction</a></li>
       <li ng-class="{active: $state.includes('yeezysidebar.yeezyhtml')}"><a ui-sref="yeezysidebar.yeezyhtml()">JavaScript</a></li>
       <li ng-class="{active: $state.includes('yeezysidebar.yeezyangular')}"><a ui-sref="yeezysidebar.yeezyangular()">AngularJS</a></li>
       <li ng-class="{active: $state.includes('yeezysidebar.yeezynode')}"><a ui-sref="yeezysidebar.yeezynode()">NodeJS</a></li>
