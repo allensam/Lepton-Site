@@ -1,5 +1,12 @@
 var yeezyweb = angular.module('yeezy', ['yeezy.controllers', 'yeezy.services', 'ui.router', 'hljs']);
 
+yeezyweb.config(function (hljsServiceProvider) {
+  hljsServiceProvider.setOptions({
+    // replace tab with 4 spaces
+    tabReplace: '    ',
+    classPrefix: ''
+  });
+});
 
 yeezyweb.run(function ($state, $rootScope, $stateParams) {
     //makes yeezystates work with yeezyhtml5
