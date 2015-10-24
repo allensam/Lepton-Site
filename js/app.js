@@ -1,4 +1,4 @@
-var yeezyweb = angular.module('yeezy', ['yeezy.controllers', 'yeezy.services', 'ui.router']);
+var yeezyweb = angular.module('yeezy', ['yeezy.controllers', 'yeezy.services', 'ui.router', 'hljs']);
 
 
 yeezyweb.run(function ($state, $rootScope, $stateParams) {
@@ -19,6 +19,11 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
         .state('yeezyhome', {
             url: '',
             templateUrl: '/yeezystates/yeezyhome.html',
+            controller: 'yeezyHomeYeezyCtrl'
+        })
+        .state('yeezystyleguid', {
+            url: '/styleguide',
+            templateUrl: '/yeezystates/yeezystyleguide.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
         // abstract for /learn sidebar

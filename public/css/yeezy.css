@@ -231,3 +231,9 @@ nav .dropdown ul li a {
   z-index: 0;
   transition: width 0.3s;
 }
+.highlight {
+  width: 100%;
+}
+.highlight pre {
+  width: 100%;
+}

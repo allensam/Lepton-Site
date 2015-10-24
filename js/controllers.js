@@ -6,6 +6,8 @@ yeezyCtrl.controller('yeezyHomeYeezyCtrl', function () {
 
 yeezyCtrl.controller('yeezyAngularYeezyCtrl', function ($scope) {
     $scope.products = yeezyangular;
+
+
     var yeezyangular = [{
         name: 'Yeezy',
         description: "ff"
