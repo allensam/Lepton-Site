@@ -44,6 +44,19 @@ body {
 
 h1 {
   letter-spacing: 1px;
+  border-bottom: 1px solid @yeezyGray;
+  padding-bottom: 5px;
+  font-size: 36px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+p {
+  padding: 5px;
 }
 
 a {
@@ -202,6 +215,7 @@ nav {
       font-size: 62px;
       margin: 15px 0;
       margin-bottom: 0;
+      border: none;
     }
 
     p {
@@ -230,6 +244,11 @@ nav {
 .col-9 {
   max-width: 75%;
   display: inline-block;
+  flex: 1;
+}
+
+.col-12 {
+  max-width: 100%;
   flex: 1;
 }
 
@@ -307,5 +326,14 @@ nav {
       }
     }
   }
+}
+
+hljs {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+   pre {
+    width: 100%;
+   }
 }
 

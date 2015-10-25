@@ -1,0 +1,12 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      node /usr/local/bin/firebase login
+[debug] Platform:     darwin
+[debug] Node Version: v0.12.1
+[debug] Time:         Fri Oct 23 2015 17:19:22 GMT-0700 (PDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Visit this URL on any device to log in:
+[info] https://www.firebase.com/login/confirm.html?ticket=9d3727c5-c716-4f41-b3b4-4c605be3ec09
+[info] 
+[info] Waiting for authentication...
+[info] 
