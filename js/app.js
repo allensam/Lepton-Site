@@ -62,6 +62,11 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/ruby',
             templateUrl: '/yeezypartials/yeezyruby.html'
         })
+        // learn javascript
+        .state('yeezysidebar.yeezyjavascript', {
+            url: '/javascript',
+            templateUrl: '/yeezypartials/yeezyjavascript.html'
+        })
         // yeezy vision
         .state('yeezyvision', {
             url: '/vision',
