@@ -1,6 +1,7 @@
 var yeezyCtrl = angular.module('yeezy.controllers', []);
 
-yeezyCtrl.controller('yeezyHomeYeezyCtrl', function () {
+//controller for handling states makes it hella cleaner (hopefully)
+yeezyCtrl.controller('statesCtrl', function () {
 
 });
 
