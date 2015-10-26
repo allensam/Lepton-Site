@@ -32,4 +32,9 @@ yeezyCtrl.controller('yeezySideBarCtrl', function ($scope) {
         name: 'YeezysControllers',
         description: "f"
     }];
+    $scope.textarea = function () {
+        $scope.testss = "works"
+    }
+
+
 });
