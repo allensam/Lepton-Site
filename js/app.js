@@ -33,16 +33,16 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezystyleguide.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
+        // learn intro
+        .state('yeezysidebar.yeezyintro', {
+            url: '/',
+            templateUrl: '/yeezypartials/yeezyintro.html'
+        })
         // abstract for /learn sidebar
         .state('yeezysidebar', {
             abstract: yeezytrue,
             url: '/learn',
             templateUrl: '/yeezystates/yeezysidebar.html'
-        })
-        // learn intro
-        .state('yeezysidebar.yeezyintro', {
-            url: '/',
-            templateUrl: '/yeezypartials/yeezyintro.html'
         })
         // learn angular
         .state('yeezysidebar.yeezyangular', {
