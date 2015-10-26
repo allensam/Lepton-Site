@@ -11,6 +11,7 @@ Colors are variables inside the less file, prefaced with yeezy (e.g. @yeezyWhite
 ### Firebase Setup
 
 > // Install Firebase
+> CD to directory
 > npm install -g firebase-tools
 
 > // Deploy

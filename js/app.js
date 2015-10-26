@@ -33,16 +33,22 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezystyleguide.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
+        // learn intro
+        .state('yeezysidebar.yeezyintro', {
+            url: '/',
+            templateUrl: '/yeezypartials/yeezyintro.html'
+        })
+        // yeezy vision
+        .state('yeezyvision', {
+            url: '/vision',
+            templateUrl: '/yeezystates/yeezyvision.html',
+            controller: 'yeezyHtmlYeezyCtrl'
+        })
         // abstract for /learn sidebar
         .state('yeezysidebar', {
             abstract: yeezytrue,
             url: '/learn',
             templateUrl: '/yeezystates/yeezysidebar.html'
-        })
-        // learn intro
-        .state('yeezysidebar.yeezyintro', {
-            url: '/',
-            templateUrl: '/yeezypartials/yeezyintro.html'
         })
         // learn angular
         .state('yeezysidebar.yeezyangular', {
@@ -79,11 +85,10 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/javascript',
             templateUrl: '/yeezypartials/yeezyjavascript.html'
         })
-        // yeezy vision
-        .state('yeezyvision', {
-            url: '/vision',
-            templateUrl: '/yeezystates/yeezyvision.html',
-            controller: 'yeezyHtmlYeezyCtrl'
+        // learn sql
+        .state('yeezysidebar.yeezysql', {
+          url: '/sql',
+          templateUrl: '/yeezypartials/yeezysql.html'
         });
     $urlRouterProvider.otherwise('/');
 });
