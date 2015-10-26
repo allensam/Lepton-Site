@@ -85,9 +85,10 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/javascript',
             templateUrl: '/yeezypartials/yeezyjavascript.html'
         })
+        // learn sql
         .state('yeezysidebar.yeezysql', {
-          url/sql
-          templateUrl: 'yeezypartials/yeezysql.html'
+          url: '/sql'
+          templateUrl: '/yeezypartials/yeezysql.html'
         })
     $urlRouterProvider.otherwise('/');
 });
