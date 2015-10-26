@@ -38,6 +38,12 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/',
             templateUrl: '/yeezypartials/yeezyintro.html'
         })
+        // yeezy vision
+        .state('yeezyvision', {
+            url: '/vision',
+            templateUrl: '/yeezystates/yeezyvision.html',
+            controller: 'yeezyHtmlYeezyCtrl'
+        });
         // abstract for /learn sidebar
         .state('yeezysidebar', {
             abstract: yeezytrue,
@@ -79,11 +85,9 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             url: '/javascript',
             templateUrl: '/yeezypartials/yeezyjavascript.html'
         })
-        // yeezy vision
-        .state('yeezyvision', {
-            url: '/vision',
-            templateUrl: '/yeezystates/yeezyvision.html',
-            controller: 'yeezyHtmlYeezyCtrl'
-        });
+        .state('yeezysidebar.yeezysql', {
+          url/sql
+          templateUrl: 'yeezypartials/yeezysql.html'
+        })
     $urlRouterProvider.otherwise('/');
 });
