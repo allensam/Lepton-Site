@@ -28,10 +28,10 @@ yeezyweb.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
             templateUrl: '/yeezystates/yeezyhome.html',
             controller: 'yeezyHomeYeezyCtrl'
         })
-        .state('yeezystyleguid', {
+        .state('yeezystyleguide', {
             url: '/styleguide',
             templateUrl: '/yeezystates/yeezystyleguide.html',
-            controller: 'yeezyHomeYeezyCtrl'
+            controller: 'statesCtrl'
         })
         // learn intro
         .state('yeezysidebar.yeezyintro', {
