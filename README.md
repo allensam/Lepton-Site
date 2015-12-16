@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/youngstartupsio/Yeezy-Codes/badges/gpa.svg)](https://codeclimate.com/github/youngstartupsio/Yeezy-Codes)
+[![Issue Count](https://codeclimate.com/github/youngstartupsio/Yeezy-Codes/badges/issue_count.svg)](https://codeclimate.com/github/youngstartupsio/Yeezy-Codes)
 [![Inline docs](http://inch-ci.org/github/youngstartupsio/Yeezy-Codes.svg?branch=master)](http://inch-ci.org/github/youngstartupsio/Yeezy-Codes)
 Yeezy Codes
 ==================
