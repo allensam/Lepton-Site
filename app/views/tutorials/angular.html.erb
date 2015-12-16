@@ -1,0 +1,17 @@
+<head>
+  <!-- loads javascript from the vendor file  -->
+  <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
+  <script src="<%= asset_path 'vendor/javascripts/angular.js' %>"></script>
+</head>
+
+<body>
+
+  <p>{{name}}</p>
+  <script>
+    var app = angular.module('app', []);
+    app.controller('testing', function($scope) {
+      $scope.name = "testing angular"
+    })
+    </script>
+
+</body>
