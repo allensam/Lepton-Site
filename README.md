@@ -5,7 +5,12 @@ and understand to new web developers or web developers just trying out a new lan
 
 ## Contribution Guide
 
-## From the beginning beginning
+### Using Rails
+
+After cloning this repo install the latest version of [ruby](https://www.ruby-lang.org/en/downloads/) (2.*). After it is installed open your terminal and check that it works with `$ ruby -v`
+change directory to the path of the repo and run `$ bundle install` (if you get fatal errors open an issue or look it up). When bundle install works run `$ rails s` to start a local server to view in your browser. Front end devs can now start their work by editing the html files in app/views/<controller> and the styles and javascript in app/assets/ Note please try to use scss to keep things organized however if you do not know coffeescript it would be easier to keep it that way but if you don't it is fine to make a new file for your own javascript (it might be converted to coffeescript to keep things the same and organized)
+
+### Github Guide
 
   1. Fork the repo to your GitHub account
   2. Clone the forked repo to your local machine
@@ -25,14 +30,26 @@ and understand to new web developers or web developers just trying out a new lan
 
 Repeat from steps 5 - 15 over and over until we have the best product ever.
 
-## Updating the whole fork
+### Updating the whole fork
 
   1. `git pull upstream`
 
-## Updating your fork for a specific branch
+### Updating your fork for a specific branch
 
   1. `git pull upstream <Specific branch>`
   2. `git checkout <Specific branch>`
 
+### Notes about contributing 
+When a change is made try to push that change with a descriptive comment on what was in the change
+
+DONOT have serveral changes in one commit or have undescriptive comments
+
+Also with big changes make sure to test if it works and have all unrelated changes pushed before pushing the big change
+
+## Resources
+1. [learn sass](http://sass-lang.com/guide)
+2. [learn coffeescript](http://coffeescript.org)
+3. More?...
 
 ## Deployment
+No information yet
