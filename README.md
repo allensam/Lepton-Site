@@ -1,3 +1,4 @@
+[![Inline docs](http://inch-ci.org/github/youngstartupsio/Yeezy-Codes.svg?branch=master)](http://inch-ci.org/github/youngstartupsio/Yeezy-Codes)
 Yeezy Codes
 ==================
 Welcome to Yeezy Codes a youngstarups.io inspired project to make coding easier to learn
