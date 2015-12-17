@@ -9,9 +9,45 @@ and understand to new web developers or web developers just trying out a new lan
 ## Contribution Guide
 
 ### Using Rails
-
+#### Installation
 After cloning this repo install the latest version of [ruby](https://www.ruby-lang.org/en/downloads/) (2.*). After it is installed open your terminal and check that it works with `$ ruby -v`
-change directory to the path of the repo and run `$ bundle install` (if you get fatal errors open an issue or look it up). When bundle install works run `$ rails s` to start a local server to view in your browser. Front end devs can now start their work by editing the html files in app/views/<controller> and the styles and javascript in app/assets/ Note please try to use scss to keep things organized however if you do not know coffeescript it would be easier to keep it that way but if you don't it is fine to make a new file for your own javascript (it might be converted to coffeescript to keep things the same and organized)
+change directory to the path of the repo and run `$ bundle install` (if you get fatal errors open an issue or look it up). 
+#### Postgresql
+This rails project does not use the defualt database because of compatibility with heroku. So you will need to install it on your computer.
+##### Mac OS 
+[Downlaod](http://postgresapp.com/)
+
+Then move to `/Aplications` and double click
+
+Next you need to set up the path (if you don't want to use the GUI)
+For standard terminal add the folling to `~/.bash_profile`
+```sh
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/<INSTALLED_VERSION>/bin
+```
+For fish shell in `config.fish` use
+```sh
+set PATH /Applications/Postgres.app/Contents/Versions/<INSTALLED_VERSION>/bin $PATH
+```
+Use `$ psql -h localhost` to start the database then you are ready for the next step!
+
+##### Linux (Debian Based)
+First make sure everything is up to date
+`sudo apt-get upgrade`
+
+then install postgres and depencies
+
+`sudo apt-get install postgresql postgresql-contrib libpq-dev`
+
+Create a database user
+
+`sudo -u postgres createuser -s pguser`
+
+Set password for user (optional)
+
+
+
+
+When bundle install works run `$ rails s` to start a local server to view in your browser. Front end devs can now start their work by editing the html files in app/views/<controller> and the styles and javascript in app/assets/ Note please try to use scss to keep things organized however if you do not know coffeescript it would be easier to keep it that way but if you don't it is fine to make a new file for your own javascript (it might be converted to coffeescript to keep things the same and organized)
 
 ### Github Guide
 
