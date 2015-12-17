@@ -2,6 +2,7 @@
 class BaseController < ApplicationController
 
   # index is the current landing page and index for app
+  # @see http://localhost:3000 home page
   def index
   end
 
