@@ -3,6 +3,7 @@
   <!-- loads javascript from the vendor file  -->
   <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
   <script src="<%= asset_path 'angular.js' %>"></script>
+  <script src="<%= asset_path 'tutorials-angular.js' %> "></script>
 </head>
 
 <body ng-controller="testing">
@@ -16,24 +17,6 @@
   <div ng-show="showNewDiv">
     OIIIII IT WORKS BRO
   </div>
-
-<!-- angular script will have to create a seprate javascript fle later -->
-  <script>
-    // initiates angular app
-    var app = angular.module('app', []);
-    // controller for this page
-    app.controller('testing', function($scope) {
-      //binding text area
-    $scope.angular_example = "$scope.showNewDiv = true;"
-
-      //method evulates code in binded area
-      function evaluatetor(inputcode) {
-        eval(inputcode);
-      }
-      var input = $scope.angular_example;
-      evaluatetor(input);
-    });
-    </script>
 
 </body>
 <html>
