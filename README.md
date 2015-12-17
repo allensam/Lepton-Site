@@ -86,16 +86,29 @@ When everything is working `rails s` (for linux may have to be in postgres user)
 
 Repeat from steps 5 - 15 over and over until we have the best product ever.
 
-### Updating the whole fork
+#### Updating the whole fork
 
   1. `git pull upstream`
 
-### Updating your fork for a specific branch
+#### Updating your fork for a specific branch
 
   1. `git pull upstream <Specific branch>`
   2. `git checkout <Specific branch>`
 
-### Notes about contributing 
+### Notes about contributing
+#### Yard
+This app needs to be very documentation heavy so that we can have people easily understand the goal of each line of code to get them on their way to contributing and so they don't give up quite easily. Also this makes the person think about their code more and make it better themselves! This way they are not coding for themselves, but other people. Also it will make pull requests and branch merges much smoother and efficiant. This is where yard comes into play
+
+Yard is bascially an gerenated website bassed off of comments and documentation so a person can see the connections between controllers methods and parameters and know what to change to make the code better
+basically when ever a method, class, module, etc is created above it you comment the basic description of the object and then make several comment lines. If your method is a fancy method (yay for you) put in one of the commet lines @author <Username or name> so that people can contact you and ask questions about it. There are also many other things you can do for yard please check out the docs [here](http://yardoc.org/guides/index.html)
+
+Also there is a yard [cheatsheet](https://gist.github.com/chetan/1827484)
+
+yard is pretty simple to use to generate new documentation do `yard doc`
+
+And then to view the docs do `yard server` and visit the url to see the documentation pretty cool right!!!
+
+#### Final thougts
 When a change is made try to push that change with a descriptive comment on what was in the change
 
 DONOT have serveral changes in one commit or have undescriptive comments
@@ -108,4 +121,5 @@ Also with big changes make sure to test if it works and have all unrelated chang
 3. More?...
 
 ## Deployment
-No information yet
+No information quite yet 
+More to come with deployment is in the near future
