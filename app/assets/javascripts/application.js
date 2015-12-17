@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//
+// always do require angularjs after everything else but before tutorials-angular
+//= require angular.js
+//= require tutorials-angular.js
