@@ -35,19 +35,36 @@ First make sure everything is up to date
 `sudo apt-get upgrade`
 
 then install postgres and depencies
-
 `sudo apt-get install postgresql postgresql-contrib libpq-dev`
 
 Create a database user
-
 `sudo -u postgres createuser -s pguser`
 
-Set password for user (optional)
+Switch to postgresql console to set password (optional but recomended)
+`sudo -u postgres psql`
 
+type this in to set password
+`\password pguser`
 
+and this to quit
+`\q`
 
+Note you may have to login to the postgresql user to do the next steps but other than that you are all done! 
 
-When bundle install works run `$ rails s` to start a local server to view in your browser. Front end devs can now start their work by editing the html files in app/views/<controller> and the styles and javascript in app/assets/ Note please try to use scss to keep things organized however if you do not know coffeescript it would be easier to keep it that way but if you don't it is fine to make a new file for your own javascript (it might be converted to coffeescript to keep things the same and organized)
+Login to user with (worked for me idk about others)
+`sudo su - postgres`
+
+#### Almost Done! (Setuping databases and running server)
+
+You will only have to run this command once to create database (databases won't be in sync with other peoples because it is for testing purposes only
+
+use sudo if needed
+`rake db:create`
+
+Then run the migration this command will probably have to be ran offten (probably ever pull changing databases)
+`rake db:migrate`
+
+When everything is working `rails s` (for linux may have to be in postgres user) to start a local server to view in your browser. Front end devs can now start their work by editing the html files in app/views/<controller> and the styles and javascript in app/assets/ Note please try to use scss to keep things organized however if you do not know coffeescript it would be easier to keep it that way but if you don't it is fine to make a new file for your own javascript (it might be converted to coffeescript to keep things the same and organized)
 
 ### Github Guide
 
