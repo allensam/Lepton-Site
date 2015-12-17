@@ -62,6 +62,13 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'>
+<p><a href="https://codeclimate.com/github/youngstartupsio/Yeezy-Codes"><img
+src="https://codeclimate.com/github/youngstartupsio/Yeezy-Codes/badges/gpa.svg"></a>
+<a href="https://codeclimate.com/github/youngstartupsio/Yeezy-Codes"><img
+src="https://codeclimate.com/github/youngstartupsio/Yeezy-Codes/badges/issue_count.svg"></a>
+<a href="http://inch-ci.org/github/youngstartupsio/Yeezy-Codes"><img
+src="http://inch-ci.org/github/youngstartupsio/Yeezy-Codes.svg?branch=master"></a></p>
+
 <h1 id="label-Yeezy+Codes">Yeezy Codes</h1>
 
 <p>Welcome to Yeezy Codes a youngstarups.io inspired project to make coding
@@ -70,11 +77,97 @@ trying out a new language!</p>
 
 <h2 id="label-Contribution+Guide">Contribution Guide</h2>
 
+<h3 id="label-Using+Rails">Using Rails</h3>
+
+<p>After cloning this repo install the latest version of <a
+href="https://www.ruby-lang.org/en/downloads/">ruby</a> (2.*). After it is
+installed open your terminal and check that it works with <code>$ ruby
+-v</code> change directory to the path of the repo and run <code>$ bundle
+install</code> (if you get fatal errors open an issue or look it up). When
+bundle install works run <code>$ rails s</code> to start a local server to
+view in your browser. Front end devs can now start their work by editing
+the html files in app/views/&lt;controller&gt; and the styles and
+javascript in app/assets/ Note please try to use scss to keep things
+organized however if you do not know coffeescript it would be easier to
+keep it that way but if you don&#39;t it is fine to make a new file for
+your own javascript (it might be converted to coffeescript to keep things
+the same and organized)</p>
+
+<h3 id="label-Github+Guide">Github Guide</h3>
+<ol><li>
+<p>Fork the repo to your GitHub account</p>
+</li><li>
+<p>Clone the forked repo to your local machine</p>
+</li><li>
+<p>Assuming you already have the repo in your local pc:</p>
+</li><li>
+<p><code>git remote add upstream
+https://github.com/youngstartupsio/Yeezy-Codes.git</code></p>
+</li><li>
+<p><code>git fetch upstream</code></p>
+</li><li>
+<p><code>git checkout -b &lt;New Feature branch with your changes&gt;</code></p>
+</li><li>
+<p>Change files as you want</p>
+</li><li>
+<p><code>git add -A</code></p>
+</li><li>
+<p><code>git commit -m &quot;A nice message describing what you
+changed&quot;</code></p>
+</li><li>
+<p><code>git checkout &lt;Branch you want to contribute&gt;</code></p>
+</li><li>
+<p><code>git pull upstream &lt;Branch you want to contribute&gt;</code></p>
+</li><li>
+<p><code>git merge &lt;New Feature branch with your changes&gt;</code></p>
+</li><li>
+<p><code>git push origin &lt;Branch you want to contribute&gt;</code></p>
+</li><li>
+<p>Go to your GitHub account, select the branch you changed, in this case, 
+<code>&lt;Branch you want to contribute&gt;</code>, and click open a new PR
+button.</p>
+</li></ol>
+
+<p>Repeat from steps 5 - 15 over and over until we have the best product ever.</p>
+
+<h3 id="label-Updating+the+whole+fork">Updating the whole fork</h3>
+<ol><li>
+<p><code>git pull upstream</code></p>
+</li></ol>
+
+<h3 id="label-Updating+your+fork+for+a+specific+branch">Updating your fork for a specific branch</h3>
+<ol><li>
+<p><code>git pull upstream &lt;Specific branch&gt;</code></p>
+</li><li>
+<p><code>git checkout &lt;Specific branch&gt;</code></p>
+</li></ol>
+
+<h3 id="label-Notes+about+contributing">Notes about contributing</h3>
+
+<p>When a change is made try to push that change with a descriptive comment on
+what was in the change</p>
+
+<p>DONOT have serveral changes in one commit or have undescriptive comments</p>
+
+<p>Also with big changes make sure to test if it works and have all unrelated
+changes pushed before pushing the big change</p>
+
+<h2 id="label-Resources">Resources</h2>
+<ol><li>
+<p><a href="http://sass-lang.com/guide">learn sass</a></p>
+</li><li>
+<p><a href="http://coffeescript.org">learn coffeescript</a></p>
+</li><li>
+<p>More?…</p>
+</li></ol>
+
 <h2 id="label-Deployment">Deployment</h2>
+
+<p>No information yet</p>
 </div></div>
 
     <div id="footer">
-  Generated on Tue Dec 15 15:54:25 2015 by
+  Generated on Wed Dec 16 21:39:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
