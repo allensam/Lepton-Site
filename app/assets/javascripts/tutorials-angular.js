@@ -11,4 +11,9 @@ $scope.angular_example = "$scope.showNewDiv = true;"
   }
   var input = $scope.angular_example;
   evaluatetor(input);
+
+  $scope.runCode = function() {
+    var inputtest = $scope.angular_example
+    evaluatetor(inputtest);
+  }
 });
