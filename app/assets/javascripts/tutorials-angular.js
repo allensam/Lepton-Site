@@ -1,14 +1,14 @@
 // initiates angular app
 var app = angular.module('app', []);
-/* controller for this page
-@param {string}
+/** controller for this page
+* @param $scope [string] injects angular scope
 */
 app.controller('testing', function($scope) {
   //binding text area
 $scope.angular_example = "$scope.showNewDiv = true;"
 
-  /* method evulates code in binded area
-  @param {string}
+  /** method evulates code in binded area
+  * @param inputcode [string] the code in the text area
   */
   function evaluatetor(inputcode) {
     eval(inputcode);

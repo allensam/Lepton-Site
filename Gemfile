@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # yardoc for markdown support in documentation
 gem 'yard', '0.8.7.6'
+# yardoc js plugin
+gem 'yard-js'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
