@@ -2,5 +2,5 @@
 //= require angular.js
 //= require tutorials-angular.js
 // this is to load the angular editors in the angular page
-//= require ace_editor/ace.js
+//= require_tree ../../../vendor/assets/javascripts/ace_editor
 //= require editors/angular-page-editors.js

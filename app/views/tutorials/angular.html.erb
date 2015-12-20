@@ -1,8 +1,14 @@
 <html ng-app="app">
 <head>
-  <!-- loads javascript from the vendor file  -->
-  <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
-  <!-- this also includes the ace editor -->
+  <style type="text/css" media="screen">
+    #editor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
 </head>
 
 <body ng-controller="testing">
@@ -23,6 +29,9 @@
   <div ng-show="showNewDiv">
     OIIIII IT WORKS BRO
   </div>
+  <!-- loads javascript from the vendor file  -->
+  <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
+  <!-- this also includes the ace editor -->
   <%= javascript_include_tag 'angular-compile-route', 'data-turbolinks-track' => true %>
 
 </body>
