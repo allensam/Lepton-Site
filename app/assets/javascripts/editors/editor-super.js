@@ -1,12 +1,8 @@
 //this page is to create a super class for editors
 //this way we can write as miminal code as possible
-
 'use strict';
-//sets the path to the editor
-ace.config.set("basePath", "ace_editor");
-
 /**
-* The Editor class makes a new ace editor that can be modified 
+* The Editor class makes a new ace editor that can be modified
 *
 * @author  Sam Allen
 * @param name [string] Sets the editor name so that id's can change styles
@@ -16,6 +12,8 @@ ace.config.set("basePath", "ace_editor");
 */
 class Editor {
   constructor(name, theme, mode) {
+    //sets the path to the editor
+    ace.config.set("basePath", "ace_editor");
     this.editor = ace.edit(name)
     this.editor.setTheme(`ace/theme/${theme}`);
     this.editor.getSession().setMode(`ace/mode/${mode}`);

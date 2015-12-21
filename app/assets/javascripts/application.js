@@ -13,3 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require editors/editor-super.js
