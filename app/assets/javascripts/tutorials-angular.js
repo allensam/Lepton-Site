@@ -1,3 +1,4 @@
+'use strict';
 // initiates angular app
 var app = angular.module('app', []);
 /** controller for this page
@@ -20,8 +21,8 @@ $scope.angular_example = "$scope.showNewDiv = true;"
     var inputtest = $scope.angular_example
     evaluatetor(inputtest);
   }
-  var font-size = "12";
-  $scope.rangeslider = font-size;
-  document.getElementById('editor').style.fontSize=font-size + "px";
+  var fontsize = "12";
+  $scope.rangeslider = fontsize;
+  document.getElementById('editor').style.fontSize=`${fontsize} + px`;
 
 });
