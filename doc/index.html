@@ -79,19 +79,75 @@ trying out a new language!</p>
 
 <h3 id="label-Using+Rails">Using Rails</h3>
 
+<h4 id="label-Installation">Installation</h4>
+
 <p>After cloning this repo install the latest version of <a
 href="https://www.ruby-lang.org/en/downloads/">ruby</a> (2.*). After it is
 installed open your terminal and check that it works with <code>$ ruby
 -v</code> change directory to the path of the repo and run <code>$ bundle
-install</code> (if you get fatal errors open an issue or look it up). When
-bundle install works run <code>$ rails s</code> to start a local server to
-view in your browser. Front end devs can now start their work by editing
-the html files in app/views/&lt;controller&gt; and the styles and
-javascript in app/assets/ Note please try to use scss to keep things
-organized however if you do not know coffeescript it would be easier to
-keep it that way but if you don&#39;t it is fine to make a new file for
-your own javascript (it might be converted to coffeescript to keep things
-the same and organized)</p>
+install</code> (if you get fatal errors open an issue or look it up).</p>
+
+<h4 id="label-Postgresql">Postgresql</h4>
+
+<p>This rails project does not use the defualt database because of
+compatibility with heroku. So you will need to install it on your computer.</p>
+
+<h5 id="label-Mac+OS">Mac OS</h5>
+
+<p><a href="http://postgresapp.com/">Downlaod</a></p>
+
+<p>Then move to <code>/Aplications</code> and double click</p>
+
+<p>Next you need to set up the path (if you don&#39;t want to use the GUI) For
+standard terminal add the folling to <code>~/.bash_profile</code> <code>sh
+export
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/&lt;INSTALLED_VERSION&gt;/bin
+</code> For fish shell in <code>config.fish</code> use <code>sh set PATH
+/Applications/Postgres.app/Contents/Versions/&lt;INSTALLED_VERSION&gt;/bin
+$PATH </code> Use <code>$ psql -h localhost</code> to start the database
+then you are ready for the next step!</p>
+
+<h5 id="label-Linux+-28Debian+Based-29">Linux (Debian Based)</h5>
+
+<p>First make sure everything is up to date <code>sudo apt-get upgrade</code></p>
+
+<p>then install postgres and depencies <code>sudo apt-get install postgresql
+postgresql-contrib libpq-dev</code></p>
+
+<p>Create a database user <code>sudo -u postgres createuser -s pguser</code></p>
+
+<p>Switch to postgresql console to set password (optional but recomended)
+<code>sudo -u postgres psql</code></p>
+
+<p>type this in to set password <code>\password pguser</code></p>
+
+<p>and this to quit <code>\q</code></p>
+
+<p>Note you may have to login to the postgresql user to do the next steps but
+other than that you are all done!</p>
+
+<p>Login to user with (worked for me idk about others) <code>sudo su -
+postgres</code></p>
+
+<h4 id="label-Almost+Done-21+-28Setuping+databases+and+running+server-29">Almost Done! (Setuping databases and running server)</h4>
+
+<p>You will only have to run this command once to create database (databases
+won&#39;t be in sync with other peoples because it is for testing purposes
+only</p>
+
+<p>use sudo if needed <code>rake db:create</code></p>
+
+<p>Then run the migration this command will probably have to be ran offten
+(probably ever pull changing databases) <code>rake db:migrate</code></p>
+
+<p>When everything is working <code>rails s</code> (for linux may have to be
+in postgres user) to start a local server to view in your browser. Front
+end devs can now start their work by editing the html files in
+app/views/&lt;controller&gt; and the styles and javascript in app/assets/
+Note please try to use scss to keep things organized however if you do not
+know coffeescript it would be easier to keep it that way but if you
+don&#39;t it is fine to make a new file for your own javascript (it might
+be converted to coffeescript to keep things the same and organized)</p>
 
 <h3 id="label-Github+Guide">Github Guide</h3>
 <ol><li>
@@ -130,12 +186,12 @@ button.</p>
 
 <p>Repeat from steps 5 - 15 over and over until we have the best product ever.</p>
 
-<h3 id="label-Updating+the+whole+fork">Updating the whole fork</h3>
+<h4 id="label-Updating+the+whole+fork">Updating the whole fork</h4>
 <ol><li>
 <p><code>git pull upstream</code></p>
 </li></ol>
 
-<h3 id="label-Updating+your+fork+for+a+specific+branch">Updating your fork for a specific branch</h3>
+<h4 id="label-Updating+your+fork+for+a+specific+branch">Updating your fork for a specific branch</h4>
 <ol><li>
 <p><code>git pull upstream &lt;Specific branch&gt;</code></p>
 </li><li>
@@ -143,6 +199,38 @@ button.</p>
 </li></ol>
 
 <h3 id="label-Notes+about+contributing">Notes about contributing</h3>
+
+<h4 id="label-Yard">Yard</h4>
+
+<p>This app needs to be very documentation heavy so that we can have people
+easily understand the goal of each line of code to get them on their way to
+contributing and so they don&#39;t give up quite easily. Also this makes
+the person think about their code more and make it better themselves! This
+way they are not coding for themselves, but other people. Also it will make
+pull requests and branch merges much smoother and efficiant. This is where
+yard comes into play</p>
+
+<p>Yard is bascially an gerenated website bassed off of comments and
+documentation so a person can see the connections between controllers
+methods and parameters and know what to change to make the code better
+basically when ever a method, class, module, etc is created above it you
+comment the basic description of the object and then make several comment
+lines. If your method is a fancy method (yay for you) put in one of the
+commet lines @author &lt;Username or name&gt; so that people can contact
+you and ask questions about it. There are also many other things you can do
+for yard please check out the docs <a
+href="http://yardoc.org/guides/index.html">here</a></p>
+
+<p>Also there is a yard <a
+href="https://gist.github.com/chetan/1827484">cheatsheet</a></p>
+
+<p>yard is pretty simple to use to generate new documentation do <code>yard
+doc</code></p>
+
+<p>And then to view the docs do <code>yard server</code> and visit the url to
+see the documentation pretty cool right!!!</p>
+
+<h4 id="label-Final+thougts">Final thougts</h4>
 
 <p>When a change is made try to push that change with a descriptive comment on
 what was in the change</p>
@@ -163,11 +251,11 @@ changes pushed before pushing the big change</p>
 
 <h2 id="label-Deployment">Deployment</h2>
 
-<p>No information yet</p>
+<p>No information quite yet More to come with deployment is in the near future</p>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Dec 16 21:39:47 2015 by
+  Generated on Sun Dec 20 00:29:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
