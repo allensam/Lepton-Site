@@ -26,13 +26,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # This enables babel to compile ES6 code
-gem 'sprockets-rails'
 gem 'sprockets'
 gem 'sprockets-es6'
-gem 'babel-transpiler'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-almond'
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
