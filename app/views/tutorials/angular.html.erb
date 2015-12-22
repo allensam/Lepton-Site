@@ -2,20 +2,13 @@
 <body ng-controller="testing">
 
   <!-- textare that contains the code -->
-  change to false and hit run to see some swag ;)<br>
-  <textarea type="text"
-            ng-model="angular_example"
-            ng-model-options="{ debounce: 1000 }">
-  </textarea><br>
-  <button ng-click="runCode()">click here to run code</button><br>
-
+  change to true and hit run to see some swag ;)<br>
   <div ng-show="showNewDiv">
     OIIIII IT WORKS BRO
   </div>
-  <div id="editor">function foo(items) {
-    var x = "All this is syntax highlighted";
-    return x;
-}</div>
+  <button ng-click="runCode()">click here to run code</button><br>
+
+  <div id="example_of_angular">$scope.showNewDiv = false;</div>
   <div>
     <input class="bar" type="range" value="50" ng-model="rangeslider"/>
     <span class="highlight"></span>

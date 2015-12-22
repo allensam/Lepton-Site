@@ -1,2 +1,2 @@
 'use strict';
-var editor = new Editor("editor", "monokai", "javascript")
+var example_of_angular = new Editor("example_of_angular", "monokai", "javascript")

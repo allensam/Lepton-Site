@@ -5,24 +5,17 @@ var app = angular.module('app', []);
 * @param $scope [string] injects angular scope
 */
 app.controller('testing', function($scope) {
-  //binding text area
-$scope.angular_example = "$scope.showNewDiv = true;"
-
+  $scope.showNewDiv = false;
   /** method evulates code in binded area
   * @param inputcode [string] the code in the text area
   */
   function evaluatetor(inputcode) {
     eval(inputcode);
   }
-  var input = $scope.angular_example;
-  evaluatetor(input);
-
   $scope.runCode = function() {
-    var inputtest = $scope.angular_example
-    evaluatetor(inputtest);
+    var input = example_of_angular.return_text_in_editor();
+    evaluatetor(input);
   }
-  var fontsize = "12";
-  $scope.rangeslider = fontsize;
-  document.getElementById('editor').style.fontSize=`${fontsize} + px`;
+  // document.getElementById('editor').style.fontSize=`${fontsize} + px`;
 
 });
