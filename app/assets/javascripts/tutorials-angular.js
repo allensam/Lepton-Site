@@ -17,5 +17,5 @@ app.controller('testing', function($scope) {
     evaluatetor(input);
   }
   // document.getElementById('editor').style.fontSize=`${fontsize} + px`;
-
+  // document.getElementByClassName()
 });

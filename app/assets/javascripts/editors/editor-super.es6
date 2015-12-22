@@ -14,9 +14,9 @@ ace.config.set("basePath", "ace_editor");
 */
 class Editor {
   //initializes the editor
-  constructor(name, theme, mode) {
+  constructor(name, mode) {
     this.name = ace.edit(name)
-    this.name.setTheme(`ace/theme/${theme}`);
+    this.name.setTheme(`ace/theme/monokai`);
     this.name.getSession().setMode(`ace/mode/${mode}`);
   }
   return_text_in_editor() {
