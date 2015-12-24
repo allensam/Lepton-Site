@@ -1,10 +1,10 @@
 'use strict';
 // initiates angular app
-var app = angular.module('app', []);
+var angular_page = angular.module('angular_page', []);
 /** controller for this page
 * @param $scope [string] injects angular scope
 */
-app.controller('testing', function($scope) {
+angular_page.controller('testing', function($scope) {
   $scope.showNewDiv = false;
   /** method evulates code in binded area
   * @param inputcode [string] the code in the text area
