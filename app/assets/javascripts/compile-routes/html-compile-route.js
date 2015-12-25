@@ -1,3 +1,3 @@
 //= require angular.js
 //= require tutorials-html.js
-//= require html-page.js
+//= require editors/html-page.js
