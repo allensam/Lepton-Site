@@ -22,4 +22,7 @@ class Editor {
   return_text_in_editor() {
       return this.name.getValue();
   }
+  set_editor_text(input) {
+    return this.name.setValue(input);
+  }
 }
