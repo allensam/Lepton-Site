@@ -4,7 +4,11 @@ html.run(function () {
 })
 
 html.controller('page', function () {
-
+  $scope.htmlExample = htmlExample.return_text_in_editor();
+  $scope.runCode = function () {
+es
+    $scope.apply();
+  }
 });
 
 html.directive('htmlExample', function () {

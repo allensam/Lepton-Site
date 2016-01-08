@@ -1,8 +1,15 @@
 <html ng-app="html">
 <body>
-  <pre id="htmlExample">
+  <div id="htmlExample">
     <div>test</div>
-  </pre>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button ng-click="runCode()">run code</button>
+  <div htmlExample>
+  </div>
   <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'compile-routes/html-compile-route', 'data-turbolinks-track' => true %>
 </body>
