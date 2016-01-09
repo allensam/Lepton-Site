@@ -12,6 +12,7 @@ ace.config.set("basePath", "ace_editor");
 * @param mode [string] Sets the mode of the text editor Ex: Javascript
 * @return it returns a new ace editor
 */
+
 class Editor {
   //initializes the editor
   constructor(name, mode) {
@@ -32,12 +33,27 @@ class Editor {
   set_editor_text(input) {
     return this.name.setValue(input);
   }
-  /**
-  * sets the defualt amount of tabs for editor
-  * @param tab [int] amount of tabs
-  * @return sets defualt tab size
-  */
-  set_editor_tab_size(tab) {
-    return this.name.editor.getSession().setTabSize(tab);
+
+}
+
+/**
+* This is to make creation of editors with multpile tags easier
+* @author Sam Allen
+* @param baseName [string] is the base of name to describe what this editor is fo
+* @param nameList [object, strings] list editor name followed by editor mode
+* @return Editors easily tabable
+* @see class Editor
+*/
+function createEditorTabs(baseName,nameList) {
+  Object.keys(nameList)[0]; //returns first key of object
+  let nameList = arr[i];
+  for (var key in nameList) {
+    let editorName = key;
+    let editorMode = nameList[key];
+    baseName + editorName = new Editor(baseName + editorName, editorMode);
   }
+}
+
+function showDifferentEditorTab(baseName,nameList) {
+
 }
