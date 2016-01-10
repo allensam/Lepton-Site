@@ -17,6 +17,21 @@
     <input class="bar" type="range" value="50" ng-model="rangeslider"/>
     <span class="highlight"></span>
   </div>
+
+  <div class="tabbed">
+    <div class="tabs">
+      <button data-foreign-tab="section-one">app.js</button>
+      <button data-foreign-tab="section-two">index.html</button>
+    </div>
+    <div class="all-editors-class" data-tab-name="section-one" id="testjs">
+      //javscript here
+    </div>
+    <div class="all-editors-class" data-tab-name="section-two" id="testhtml">
+    </div>
+  </div>
+
+
+
   <!-- loads javascript from the vendor file  -->
   <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
   <!-- this also includes the ace editor -->
