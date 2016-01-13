@@ -44,16 +44,3 @@ class Editor {
 * @return Editors easily tabable
 * @see class Editor
 */
-function createEditorTabs(baseName,nameList) {
-  Object.keys(nameList)[0]; //returns first key of object
-  let nameList = arr[i];
-  for (var key in nameList) {
-    let editorName = key;
-    let editorMode = nameList[key];
-    baseName + editorName = new Editor(baseName + editorName, editorMode);
-  }
-}
-
-function showDifferentEditorTab(baseName,nameList) {
-
-}
