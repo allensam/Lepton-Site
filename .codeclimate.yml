@@ -7,6 +7,10 @@ engines:
     enabled: true
   csslint:
     enabled: true
+ratings:
+  paths:
+  - app/**
 exclude_paths:
   - test/**
   - doc/**
+  - config/**
