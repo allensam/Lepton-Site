@@ -35,7 +35,6 @@ class Editor {
   }
 }
 
-<<<<<<< HEAD
 function remove_active(parent) {
   var elems = parent.querySelectorAll('.active');
   for (var i = 0; i < elems.length; i++) {
@@ -60,13 +59,3 @@ function setup_tabs() {
 window.addEventListener ?
 window.addEventListener("load",setup_tabs(),false) :
 window.attachEvent && window.attachEvent("onload",setup_tabs());
-=======
-/**
-* This is to make creation of editors with multpile tags easier
-* @author Sam Allen
-* @param baseName [string] is the base of name to describe what this editor is fo
-* @param nameList [object, strings] list editor name followed by editor mode
-* @return Editors easily tabable
-* @see class Editor
-*/
->>>>>>> ffe4afce52ac9431bb4e4998bb5fc285cf15c115
