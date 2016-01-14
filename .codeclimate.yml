@@ -1,0 +1,12 @@
+engines:
+  rubocop:
+    enabled: true
+  golint:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+exclude_paths:
+  - test/**
+  - doc/**
