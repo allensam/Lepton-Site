@@ -1,11 +1,15 @@
 engines:
   rubocop:
     enabled: true
-  golint:
-    enabled: true
   eslint:
     enabled: true
   csslint:
+    enabled: false
+  scss-lint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  eslint:
     enabled: true
 ratings:
   paths:
