@@ -13,21 +13,20 @@
   <button ng-click="runCode()">Change statement to true and click here!</button><br>
 
   <div class="all-editors-class" id="example_of_angular">$scope.showNewDiv = false;</div>
-  <div>
-    <input class="bar" type="range" value="50" ng-model="rangeslider"/>
-    <span class="highlight"></span>
-  </div>
 
-  <div class="tabbed">
-    <div class="tabs">
-      <button data-foreign-tab="section-one">app.js</button>
-      <button data-foreign-tab="section-two">index.html</button>
+  <div class="tab-wrap">
+    <div class="tab" data-tab-reference="tab_1">Tab 1</div>
+    <div class="tab" data-tab-reference="tab_2">Tab 2</div>
+    <br>
+
+    <div class="tab-section active" data-tab-id="tab_1">
+        <div class="all-editors-class" data-tab-name="section-one" id="testjst">function () {}</div>
     </div>
-    <div class="all-editors-class" data-tab-name="section-one" id="testjs">
-      //javscript here
+
+    <div class="tab-section" data-tab-id="tab_2">
+      <div class="all-editors-class" data-tab-name="section-two" id="testhtml"></div>
     </div>
-    <div class="all-editors-class" data-tab-name="section-two" id="testhtml">
-    </div>
+
   </div>
 
 
