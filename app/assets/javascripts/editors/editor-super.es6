@@ -33,14 +33,29 @@ class Editor {
   set_editor_text(input) {
     return this.name.setValue(input);
   }
-
 }
 
-/**
-* This is to make creation of editors with multpile tags easier
-* @author Sam Allen
-* @param baseName [string] is the base of name to describe what this editor is fo
-* @param nameList [object, strings] list editor name followed by editor mode
-* @return Editors easily tabable
-* @see class Editor
-*/
+function remove_active(parent) {
+  var elems = parent.querySelectorAll('.active');
+  for (let i = 0; i < elems.length; i++) {
+    elems[i].classList.remove('active');
+  }
+}
+
+function setup_tabs() {
+  var tabs = document.querySelectorAll('.tab');
+  console.log(tabs);
+  for (let i = 0; i < tabs.length; i++) {
+    var tab = tabs[i];
+    tab.addEventListener('click', function(e) {
+      let id = this.dataset.tabReference;
+      remove_active(this.parentElement);
+      let tab_section = this.parentElement.querySelector('[data-tab-id="' + id + '"]');
+      tab_section.classList.add('active');
+    });
+  }
+}
+//listen for events/ window on load
+window.addEventListener ?
+window.addEventListener("load",setup_tabs(),false) :
+window.attachEvent && window.attachEvent("onload",setup_tabs());

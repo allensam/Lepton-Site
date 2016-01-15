@@ -1,0 +1,20 @@
+engines:
+  rubocop:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: false
+  scss-lint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  eslint:
+    enabled: true
+ratings:
+  paths:
+  - app/**
+exclude_paths:
+  - test/**
+  - doc/**
+  - config/**
