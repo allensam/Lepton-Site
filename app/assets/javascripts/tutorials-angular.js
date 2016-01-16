@@ -6,16 +6,8 @@ var angular_page = angular.module('angular_page', []);
 */
 angular_page.controller('testing', function($scope) {
   $scope.showNewDiv = false;
-  /** method evulates code in binded area
-  * @param inputcode [string] the code in the text area
-  */
-  function evaluatetor(inputcode) {
-    eval(inputcode);
+  $scope.runCode = function(name) {
+    var input = eval(name + ".return_text_in_editor();");
+    eval(input);
   }
-  $scope.runCode = function() {
-    var input = example_of_angular.return_text_in_editor();
-    evaluatetor(input);
-  }
-  // document.getElementById('editor').style.fontSize=`${fontsize} + px`;
-  // document.getElementByClassName()
 });
