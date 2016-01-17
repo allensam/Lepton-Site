@@ -1,23 +1,27 @@
 <html ng-app="angular_page">
 <body ng-controller="testing">
-  Welcome to the Angular tutorial! This tutorial will teach you how to use AngularJS.
-  AngularJS is a Javascript framework. If you haven't learned the basics of Javascript I'd HIGHLY recommend learning a bit of Javascript.
-  For starters, Angular is a platform that binds the Javascript to the HTML and the HTML to the Javascript.
-  This allows you to call Javascript functions from anywhere in the code on any sort of event, or modify
-  the HTML with Javascript. We will cover that later but for now, let's dive right in!<br>
+  Welcome to the Angular tutorial! This tutorial will teach you how to use
+  AngularJS. AngularJS is a Javascript framework. If you haven't learned the
+  basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For
+  starters, Angular is a platform that binds the Javascript to the HTML and the
+  HTML to the Javascript. This allows you to call Javascript functions from
+  anywhere in the code on any sort of event, or modify the HTML with Javascript.
+  We will cover that later but for now, let's dive right in!<br>
   <div ng-show="showNewDiv">
     Wow isn't that cool :D
   </div>
   <button ng-click="runCode('example_of_angular')">Change statement to true and click here!</button>
   <div class="all-editors-class" id="example_of_angular">$scope.showNewDiv = false;</div>
+  
+  what you saw was one of the main things angular wants to acomplish the binding
+  of data. What does this mean? Basically Angular wants important data to be
+  able to be accessed from both the javascript and html.
   <br>
 
-  <br>
   <div class="tab-wrap">
     <div class="tab" data-tab-reference="tab_1">Tab 1</div>
     <div class="tab" data-tab-reference="tab_2">Tab 2</div>
     <br>
-
     <div class="tab-section active" data-tab-id="tab_1">
         <div class="all-editors-class" data-tab-name="section-one" id="testjst">function () {}</div>
     </div>
