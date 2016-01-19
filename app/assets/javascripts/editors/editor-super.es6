@@ -36,7 +36,7 @@ class Editor {
 }
 
 function remove_active(parent) {
-  var elems = parent.querySelectorAll('.active');
+  let elems = parent.querySelectorAll('.active');
   for (let i = 0; i < elems.length; i++) {
     elems[i].classList.remove('active');
   }
@@ -44,9 +44,8 @@ function remove_active(parent) {
 
 function setup_tabs() {
   var tabs = document.querySelectorAll('.tab');
-  console.log(tabs);
   for (let i = 0; i < tabs.length; i++) {
-    var tab = tabs[i];
+    let tab = tabs[i];
     tab.addEventListener('click', function(e) {
       let id = this.dataset.tabReference;
       remove_active(this.parentElement);
