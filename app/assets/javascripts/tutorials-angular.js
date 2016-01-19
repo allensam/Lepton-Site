@@ -6,18 +6,17 @@ var angular_page = angular.module('angular_page', []);
  */
 angular_page.controller('testing', function($scope) {
   $scope.showNewDiv = false;
-  $scope.testing = "no errors";
   $scope.runCode = function(name) {
-
+    eval("$scope." + name + " = 'Error feedback is here!';")
     var passed = false;
-    var input = eval(name + ".return_text_in_editor();");
+    var input = name + ".return_text_in_editor();"
     try {
       eval(input + "passed = true;")
     } catch(e) {
-      $scope.testing = e.message;
+      eval("$scope." + name + " = " + "'" + e.message + "'" + ";")
     } finally {
       if (passed == true) {
-        $scope.testing = "No erros! :)"
+        eval("$scope." + name + " = 'no Errors! :)';")
       }
     }
 
