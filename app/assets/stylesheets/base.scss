@@ -2,8 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
-  font-size: 100px;
-}
-body {
   font-size: 50px;
+  text-align: center;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+ul {
+  font-size: 20px;
+}
+p {
+  font-size: 15px;
 }
