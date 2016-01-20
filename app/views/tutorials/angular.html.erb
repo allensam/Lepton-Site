@@ -1,5 +1,5 @@
 <html ng-app="angular_page">
-<body ng-controller="testing" ng-cloak>
+<body ng-controller="testing">
   Welcome to the Angular tutorial! This tutorial will teach you how to use
   AngularJS. AngularJS is a Javascript framework. If you haven't learned the
   basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For
@@ -7,12 +7,12 @@
   HTML to the Javascript. This allows you to call Javascript functions from
   anywhere in the code on any sort of event, or modify the HTML with Javascript.
   We will cover that later but for now, let's dive right in!<br>
-  <div ng-show="showNewDiv">
+  <div ng-show="showNewDiv" ng-cloak fade-ng-cloak>
     Wow isn't that cool :D
   </div>
   <button ng-click="runCode('example_of_angular')">Change statement to true and click here!</button>
   <br>
-  <p>{{example_of_angular || 'Error feedback will be located here!'}}</p>
+  <p ng-cloak fade-ng-cloak>{{example_of_angular || 'Error feedback will be located here!'}}</p>
   <div class="all-editors-class" id="example_of_angular">$scope.showNewDiv = false;</div>
 
   what you saw was one of the main things angular wants to acomplish the binding
