@@ -33,6 +33,10 @@ class Editor {
   set_editor_text(input) {
     return this.name.setValue(input);
   }
+
+  set_editor_rw(rwinput) {
+    return this.name.setReadOnly(rwinput);
+  }
 }
 
 function remove_active(parent) {
