@@ -1,30 +1,36 @@
 <html ng-app="angular_page">
 <body ng-controller="testing">
-  <!-- textare that contains the code -->
-  Welecome to the angular tutorial! this tutorial will teach you how to use AngularJS
-  AngularJS is a Javascript framework so if you haven't learned the basics of javascript I'd reccommend doing that now.
-  To get started Angular is basicaly a platform that binds the javascript to the HTML and the HTML to the javascript
-  what this does is basically allow you to call javascript functions from anywhere in the code on any sort of event or modify
-  the html with javascript. Let's get deaper into the explaination later and jump right into!<br>
-  <div ng-show="showNewDiv">
+  Welcome to the Angular tutorial! This tutorial will teach you how to use
+  AngularJS. AngularJS is a Javascript framework. If you haven't learned the
+  basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For
+  starters, Angular is a platform that binds the Javascript to the HTML and the
+  HTML to the Javascript. This allows you to call Javascript functions from
+  anywhere in the code on any sort of event, or modify the HTML with Javascript.
+  We will cover that later but for now, let's dive right in!<br>
+  <div ng-show="showNewDiv" ng-cloak fade-ng-cloak>
     Wow isn't that cool :D
   </div>
-  <button ng-click="runCode()">Change statement to true and click here!</button>
+  <button ng-click="runCode('example_of_angular')">Change statement to true and click here!</button>
+  <br>
+  <p ng-cloak fade-ng-cloak>{{example_of_angular || 'Error feedback will be located here!'}}</p>
   <div class="all-editors-class" id="example_of_angular">$scope.showNewDiv = false;</div>
+
+  what you saw was one of the main things angular wants to acomplish the binding
+  of data. What does this mean? Basically Angular wants important data to be
+  able to be accessed from both the javascript and html.
   <br>
 
-  <br>
+  Now it's time to dive right in on how to creat an angular app!
   <div class="tab-wrap">
-    <div class="tab" data-tab-reference="tab_1">Tab 1</div>
-    <div class="tab" data-tab-reference="tab_2">Tab 2</div>
+    <div class="tab" data-tab-reference="tab_1">app.js</div>
+    <div class="tab" data-tab-reference="tab_2">index.html</div>
     <br>
-
     <div class="tab-section active" data-tab-id="tab_1">
-        <div class="all-editors-class" data-tab-name="section-one" id="testjst">function () {}</div>
+        <div class="all-editors-class" data-tab-name="section-one" id="start_angular_js"></div>
     </div>
 
     <div class="tab-section" data-tab-id="tab_2">
-      <div class="all-editors-class" data-tab-name="section-two" id="testhtml"></div>
+      <div class="all-editors-class" data-tab-name="section-two" id="start_angular_html"></div>
     </div>
 
   </div>

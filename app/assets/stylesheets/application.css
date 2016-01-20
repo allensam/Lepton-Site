@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ [ng\:cloak],
+ [ng-cloak],
+ [data-ng-cloak],
+ [x-ng-cloak],
+ .ng-cloak,
+ .x-ng-cloak {
+   display: none !important;
+ }
+ .fade-ng-cloak {
+   opacity: 1;
+   -ms-filter: none;
+   -webkit-filter: none;
+           filter: none;
+   -webkit-transition: opacity 0.5s;
+   transition: opacity 0.5s;
+ }
+ .fade-ng-cloak[ng-cloak] {
+   display: block !important;
+   opacity: 0;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+ }
+ .fade-ng-cloak.ng-cloak,
+ .fade-ng-cloak.ng-binding {
+     opacity: 0;
+     transition: opacity 800ms ease-in-out;
+ }
+ .fade-ng-cloak.ng-binding {
+     opacity: 1;
+ }
