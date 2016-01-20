@@ -10,7 +10,7 @@ angular_page.controller('testing', function($scope) {
     var input_error = "$scope." + name + " = 'Error feedback is here!';";
     eval(input_error);
     var passed = false;
-    let input = eval(name + ".return_text_in_editor();");
+    var input = eval(name + ".return_text_in_editor();");
     try {
       eval(input + " passed = true;");
     } catch(e) {
