@@ -1,10 +1,10 @@
 'use strict';
 // initiates angular app
-var angular_page = angular.module('angular_page', []);
+var javascriptModule = angular.module('javascriptModule', []);
 /** controller for this page
  * @param $scope [string] injects angular scope
  */
-angular_page.controller('testing', function($scope) {
+ javascriptModule.controller('testing', function($scope) {
   $scope.showNewDiv = false;
   $scope.runCode = function(name) {
     var input_error = "$scope." + name + " = 'Error feedback is here!';";
@@ -23,3 +23,6 @@ angular_page.controller('testing', function($scope) {
 
   }
 });
+
+var htmlModule = angular.module('htmlModule', []);
+angular.bootstrap(document, ['javascriptModule', 'htmlModule']);
