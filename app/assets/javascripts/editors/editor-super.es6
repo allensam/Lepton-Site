@@ -15,10 +15,11 @@ ace.config.set("basePath", "ace_editor");
 
 class Editor {
   //initializes the editor
-  constructor(name, mode) {
+  constructor(name, mode, fontSize) {
     this.name = ace.edit(name)
     this.name.setTheme(`ace/theme/monokai`);
     this.name.getSession().setMode(`ace/mode/${mode}`);
+
   }
   /**
   * @return [string] editor text
@@ -58,6 +59,9 @@ function setup_tabs() {
     });
   }
 }
+
+// document.getElementsByClassName('all-editors-class').style.fontSize='40px';
+// document.getElementById('example_of_angular').syle.fontSize='40px';
 //listen for events/ window on load
 window.addEventListener ?
 window.addEventListener("load",setup_tabs(),false) :
