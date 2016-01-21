@@ -15,7 +15,7 @@ change directory to the path of the repo and run `$ bundle install` (if you get 
 #### Postgresql
 This rails project does not use the defualt database because of compatibility with heroku. So you will need to install it on your computer.
 ##### Mac OS 
-[Downlaod](http://postgresapp.com/)
+[Download](http://postgresapp.com/)
 
 Then move to `/Aplications` and double click
 
