@@ -12,3 +12,6 @@
 //
 //
 //= require turbolinks
+(function () {
+  //code for ie goes here
+}())

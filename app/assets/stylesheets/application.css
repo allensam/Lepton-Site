@@ -46,3 +46,8 @@
  html, body {
    font-size: 20px;
  }
+
+ .ie {
+   background-color:red;
+   z-index: 100000;
+ }
