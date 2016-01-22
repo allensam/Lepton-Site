@@ -38,10 +38,6 @@ class Editor {
   set_editor_rw(rwinput) {
     return this.name.setReadOnly(rwinput);
   }
-
-  get_session_on_change(sessionInput) {
-    return this.name.getSession().addEventListener(sessionInput);
-  }
 }
 
 function remove_active(parent) {
