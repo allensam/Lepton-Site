@@ -23,6 +23,7 @@ var javascriptModule = angular.module('javascriptModule', []);
 
   }
 });
+
 function getHtmlBindClasses() {
   var ids = [];
   var binds =  document.getElementsByClassName('bind-html');
@@ -39,16 +40,25 @@ htmlModule.config(function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
   // Do not use in new projects.
   $sceProvider.enabled(false);
+})
+.run(function ($rootScope) {
+  document.onkeyup = function(evt) {
+    var idArray = getHtmlBindClasses();
+    for (var i = 0; i < idArray.length; i++) {
+      var scopeInput = "$rootScope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
+      // var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
+      eval(scopeInput)
+      $rootScope.$digest();
+    }
+  }
 });
 
-htmlModule.controller('htmlBind', function ($scope) {
+htmlModule.controller('htmlBind', function ($rootScope) {
     var idArray = getHtmlBindClasses();
-
-    for (var i = 0; i < idArray.length; i++) {
-      var scopeInput = "$scope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
-      var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
-      eval(input)
+      for (var i = 0; i < idArray.length; i++) {
+        var scopeInput = "$rootScope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
+        // var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
+        eval(scopeInput)
     }
-
 });
 angular.module("bothModules", ["javascriptModule", "htmlModule"]);
