@@ -23,6 +23,32 @@ var javascriptModule = angular.module('javascriptModule', []);
 
   }
 });
+function getHtmlBindClasses() {
+  var ids = [];
+  var binds =  document.getElementsByClassName('bind-html');
+  for (var i = 0; i < binds.length; i++) {
+    var id = binds[i].id;
+      ids.push(id);
+  }
+  console.log(ids)
+  return ids
+}
 
 var htmlModule = angular.module('htmlModule', []);
-angular.bootstrap(document, ['javascriptModule', 'htmlModule']);
+htmlModule.config(function($sceProvider) {
+  // Completely disable SCE.  For demonstration purposes only!
+  // Do not use in new projects.
+  $sceProvider.enabled(false);
+});
+
+htmlModule.controller('htmlBind', function ($scope) {
+    var idArray = getHtmlBindClasses();
+
+    for (var i = 0; i < idArray.length; i++) {
+      var scopeInput = "$scope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
+      var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
+      eval(input)
+    }
+
+});
+angular.module("bothModules", ["javascriptModule", "htmlModule"]);
