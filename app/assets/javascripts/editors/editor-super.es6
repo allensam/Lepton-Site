@@ -19,6 +19,7 @@ class Editor {
     this.name = ace.edit(name)
     this.name.setTheme(`ace/theme/monokai`);
     this.name.getSession().setMode(`ace/mode/${mode}`);
+    this.name.$blockScrolling = Infinity;
 
   }
   /**

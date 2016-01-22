@@ -29,10 +29,9 @@ function getHtmlBindClasses() {
   var binds =  document.getElementsByClassName('bind-html');
   for (var i = 0; i < binds.length; i++) {
     var id = binds[i].id;
-      ids.push(id);
+      var string = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
+      return string
   }
-  console.log(ids)
-  return ids
 }
 
 var htmlModule = angular.module('htmlModule', []);
@@ -43,22 +42,13 @@ htmlModule.config(function($sceProvider) {
 })
 .run(function ($rootScope) {
   document.onkeyup = function(evt) {
-    var idArray = getHtmlBindClasses();
-    for (var i = 0; i < idArray.length; i++) {
-      var scopeInput = "$rootScope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
-      // var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
-      eval(scopeInput)
+    var input = getHtmlBindClasses();
+      eval(input)
       $rootScope.$digest();
-    }
   }
-});
-
-htmlModule.controller('htmlBind', function ($rootScope) {
-    var idArray = getHtmlBindClasses();
-      for (var i = 0; i < idArray.length; i++) {
-        var scopeInput = "$rootScope." + idArray[i] + " = " + idArray[i] + ".return_text_in_editor(); ";
-        // var input = scopeInput + idArray[i] + ".get_session_on_change('change', function(e) { " + scopeInput + " })";
-        eval(scopeInput)
-    }
+})
+.controller('htmlBind', function ($rootScope) {
+    var input = getHtmlBindClasses();
+    eval(input)
 });
 angular.module("bothModules", ["javascriptModule", "htmlModule"]);
