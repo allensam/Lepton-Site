@@ -7,14 +7,9 @@
     width: 400px;
     margin-top: 30px;
     margin-bottom: 50px;
+    font-size: 20px;
 }
 
-#htmlExample {
-    position: relative;
-    height: 20%;
-    width: 60%;
-    margin-top: 0;
-}
 .tab-section {
 
 }
@@ -38,6 +33,12 @@
   height: 20%;
   width: 60%;
   margin-top: 0;
+}
+
+#htmlExample {
+  position: absolute;
+  height: 200px;
+  width: 400px;
 }
 .tab {
   color: white;

@@ -43,3 +43,11 @@
  .fade-ng-cloak.ng-binding {
      opacity: 1;
  }
+ html, body {
+   font-size: 20px;
+ }
+
+ .ie {
+   background-color:red;
+   z-index: 100000;
+ }

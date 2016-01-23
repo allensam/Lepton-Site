@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( compile-routes/super-compile-route.js )
 Rails.application.config.assets.precompile += %w( compile-routes/angular-compile-route.js )
 Rails.application.config.assets.precompile += %w( compile-routes/html-compile-route.js )
+Rails.application.config.assets.precompile += %w( compile-routes/javascript-compile-route.js )
