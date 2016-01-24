@@ -4,33 +4,42 @@
 @import "reset";
 @import "mixins";
 @import "editors";
-
 .home {
-    width: 60%;
-    margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
 .tab-section {
-    width: 100%;
+  width: 100%;
 }
 .tab-wrap .tab-section {
-    display: none;
+  display: none;
 }
 .tab-section.active {
-    display: block;
+  display: block;
 }
 .tab {
-    color: white;
-    float: left;
-    height: 50px;
-    width: 50px;
-    background-color: black;
+  color: white;
+  float: left;
+  height: 50px;
+  width: 50px;
+  background-color: black;
 }
-.showDiv {
-    font-family: "PT Mono", monospace;
-    font-size: 15px;
-    padding: 20px;
-    border: solid 2px #ecf0f1;
-    color: #aaa;
-    @include border-radius(4px);
-    margin-bottom: 20px;
+.errorDiv {
+  font-family: "PT Mono", monospace;
+  font-size: 15px;
+  padding: 20px;
+  border: solid 2px #ecf0f1;
+  color: #aaa;
+  @include border-radius(4px);
+  margin-bottom: 20px;
+  height: 0;
+}
+.showNewDiv {
+  font-family: "PT Mono", monospace;
+  font-size: 15px;
+  padding: 20px;
+  border: solid 2px #9b59b6;
+  width: 500px;
+  height: 30px;
+  @include border-radius(4px);
 }

@@ -22,7 +22,3 @@
  .x-ng-cloak {
    display: none !important;
  }
- .ie {
-   background-color:red;
-   z-index: 100000;
- }

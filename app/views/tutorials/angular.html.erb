@@ -10,7 +10,7 @@
         </p>
         <br>
         <div ng-controller="testing">
-            <div ng-show="showNewDiv" ng-cloak>
+            <div ng-show="showNewDiv" class="showNewDiv" ng-cloak>
                 Wow isn't that cool :D
             </div>
             <p>
@@ -18,10 +18,11 @@
             </p>
             <button ng-click="runCode('example_of_angular')">Click to run!</button>
             <br>
-            <div class="showDiv" ng-cloak>
+
+            <div ng-cloak class="all-editors-class tab-section" id="example_of_angular">$scope.showNewDiv = false;</div>
+            <div class="errorDiv" ng-cloak>
                 {{example_of_angular || 'Error feedback will be located here!'}}
             </div>
-            <div ng-cloak class="all-editors-class tab-section" id="example_of_angular">$scope.showNewDiv = false;</div>
                 <p>
                     what you saw was one of the main things angular wants to acomplish the binding of data. What does this mean? Basically Angular wants important data to be able to be accessed from both the javascript and html.
                 </p>
