@@ -10,7 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require base.scss
+ *= require tutorials.scss
  *= require_self
  */
  [ng\:cloak],
@@ -21,32 +22,6 @@
  .x-ng-cloak {
    display: none !important;
  }
- .fade-ng-cloak {
-   opacity: 1;
-   -ms-filter: none;
-   -webkit-filter: none;
-           filter: none;
-   -webkit-transition: opacity 0.5s;
-   transition: opacity 0.5s;
- }
- .fade-ng-cloak[ng-cloak] {
-   display: block !important;
-   opacity: 0;
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
- }
- .fade-ng-cloak.ng-cloak,
- .fade-ng-cloak.ng-binding {
-     opacity: 0;
-     transition: opacity 800ms ease-in-out;
- }
- .fade-ng-cloak.ng-binding {
-     opacity: 1;
- }
- html, body {
-   font-size: 20px;
- }
-
  .ie {
    background-color:red;
    z-index: 100000;

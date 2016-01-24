@@ -3,14 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "reset";
 @import "mixins";
+@import "editors";
 
-#example_of_angular {
-    position: relative;
-    height: 100px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    font-size: 20px;
-}
 .home {
     width: 60%;
     margin: 0 auto;
@@ -23,23 +17,6 @@
 }
 .tab-section.active {
     display: block;
-}
-#start_angular_js {
-    position: absolute;
-    height: 20%;
-    width: 60%;
-    margin-top: 0;
-}
-#start_angular_html {
-    position: absolute;
-    height: 20%;
-    width: 60%;
-    margin-top: 0;
-}
-#htmlExample {
-    position: absolute;
-    height: 200px;
-    width: 400px;
 }
 .tab {
     color: white;
@@ -54,6 +31,6 @@
     padding: 20px;
     border: solid 2px #ecf0f1;
     color: #aaa;
-    border-radius: 4px;
+    @include border-radius(4px);
     margin-bottom: 20px;
 }

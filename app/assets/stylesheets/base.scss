@@ -1,12 +1,14 @@
 // Place all the styles related to the base controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "reset";
+@import "mixins";
 h1 {
     font-size: 50px;
     text-align: center;
     margin: auto;
     line-height: 1.6em;
-    padding: 20px 0;    
+    padding: 20px 0;
 }
 h2 {
     font-size: 30px;
