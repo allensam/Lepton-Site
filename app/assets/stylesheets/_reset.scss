@@ -1,8 +1,16 @@
 /* FONTS */
 /*@import url("http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700");*/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
 * {
   margin: 0;
   padding: 0;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;
+    color: #333;
 }
 // Font Variables
 /*$roboto-slab: 'Roboto Slab', serif;
