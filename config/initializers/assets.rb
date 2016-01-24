@@ -10,6 +10,6 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( compile-routes/super-compile-route.js )
-Rails.application.config.assets.precompile += %w( compile-routes/angular-compile-route.js )
-Rails.application.config.assets.precompile += %w( compile-routes/html-compile-route.js )
-Rails.application.config.assets.precompile += %w( compile-routes/javascript-compile-route.js )
+Rails.application.config.assets.precompile += %w( editors/angular-page.es6 )
+Rails.application.config.assets.precompile += %w( editors/html-page.es6 )
+Rails.application.config.assets.precompile += %w( editors/javascript-page.es6 )
