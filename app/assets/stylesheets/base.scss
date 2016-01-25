@@ -5,19 +5,16 @@
 @import "mixins";
 h1 {
     font-size: 50px;
-    text-align: center;
     margin: auto;
     line-height: 1.6em;
     padding: 20px 0;
 }
 h2 {
     font-size: 30px;
-    text-align: center;
     line-height: 1.6em;
     padding: 20px 0;
 }
 h4 {
-    text-align: center;
     font-size: 35px;
     line-height: 1.6em;
     padding: 20px 0;
@@ -36,17 +33,4 @@ a {
 }
 a:hover {
     background-color: red;
-}
-
-button {
-    background-color: #fff;
-    border: solid 2px #9b59b6;
-    padding: 10px 20px;
-    color: #9b59b6;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    margin-bottom: 20px;
 }

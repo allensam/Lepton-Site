@@ -1,53 +1,45 @@
-<html>
+<div ng-app="javascriptModule" class="home">
+  <h2>AngularJS Tutorial</h2>
+  <p>
+    Welcome to the Angular tutorial! This tutorial will teach you how to use AngularJS. AngularJS is a Javascript framework. If you haven't learned the basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For starters, Angular is a platform
+    that binds the Javascript to the HTML and the HTML to the Javascript. This allows you to call Javascript functions from anywhere in the code on any sort of event, or modify the HTML with Javascript. We will cover that later but for now, let's dive
+    right in!
+  </p>
+  <br>
+  <div ng-controller="testing">
+    <div ng-show="showNewDiv" class="showNewDiv" ng-cloak>
+      Wow isn't that cool :D
+    </div>
+    <p>
+      Change the statement to true, and try it!
+    </p>
+    <button ng-click="runCode('example_of_angular')">Click to run!</button>
+    <br>
 
-<body>
-    <div ng-app="javascriptModule" class="home">
-        <h2>AngularJS Tutorial</h2>
-        <p>
-            Welcome to the Angular tutorial! This tutorial will teach you how to use AngularJS. AngularJS is a Javascript framework. If you haven't learned the basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For starters, Angular is a platform
-            that binds the Javascript to the HTML and the HTML to the Javascript. This allows you to call Javascript functions from anywhere in the code on any sort of event, or modify the HTML with Javascript. We will cover that later but for now, let's
-            dive right in!
-        </p>
-        <br>
-        <div ng-controller="testing">
-            <div ng-show="showNewDiv" class="showNewDiv" ng-cloak>
-                Wow isn't that cool :D
-            </div>
-            <p>
-                Change the statement to true, and try it!
-            </p>
-            <button ng-click="runCode('example_of_angular')">Click to run!</button>
-            <br>
-
-            <div ng-cloak class="all-editors-class tab-section" id="example_of_angular">$scope.showNewDiv = false;</div>
-            <div class="errorDiv" ng-cloak>
-                {{example_of_angular || 'Error feedback will be located here!'}}
-            </div>
-                <p>
-                    what you saw was one of the main things angular wants to acomplish the binding of data. What does this mean? Basically Angular wants important data to be able to be accessed from both the javascript and html.
-                </p>
-            <br> Now it's time to dive right in on how to creat an angular app!
-            <div class="tab-wrap">
-                <div class="tab" data-tab-reference="tab_1">app.js</div>
-                <div class="tab" data-tab-reference="tab_2">index.html</div>
-                <br>
-                <div class="tab-section active" data-tab-id="tab_1">
-                    <div class="all-editors-class" data-tab-name="section-one" id="start_angular_js"></div>
-                </div>
-                <div class="tab-section" data-tab-id="tab_2">
-                    <div class="all-editors-class" data-tab-name="section-two" id="start_angular_html"></div>
-                </div>
-            </div>
-        </div>
-        <div>
-
-
-
-            <!-- loads javascript from the vendor file  -->
-            <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
-            <!-- this also includes the ace editor -->
-            <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
-            <%= javascript_include_tag 'editors/angular-page', 'data-turbolinks-track' => true %>
-
-</body>
-<html>
+    <div ng-cloak class="all-editors-class tab-section" id="example_of_angular">$scope.showNewDiv = false;</div>
+    <div class="errorDiv" ng-cloak>
+      {{example_of_angular || 'Error feedback will be located here!'}}
+    </div>
+    <p>
+      what you saw was one of the main things angular wants to acomplish the binding of data. What does this mean? Basically Angular wants important data to be able to be accessed from both the javascript and html.
+    </p>
+    <br> Now it's time to dive right in on how to creat an angular app!
+    <div class="tab-wrap">
+      <div class="tab" data-tab-reference="tab_1">app.js</div>
+      <div class="tab" data-tab-reference="tab_2">index.html</div>
+      <br>
+      <div class="tab-section active" data-tab-id="tab_1">
+        <div class="all-editors-class" data-tab-name="section-one" id="start_angular_js"></div>
+      </div>
+      <div class="tab-section" data-tab-id="tab_2">
+        <div class="all-editors-class" data-tab-name="section-two" id="start_angular_html"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- loads javascript from the vendor file  -->
+  <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
+  <!-- this also includes the ace editor -->
+  <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'editors/angular-page', 'data-turbolinks-track' => true %>
+</div>
