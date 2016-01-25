@@ -7,7 +7,7 @@
   </p>
   <br>
   <div ng-controller="testing">
-    <div ng-show="showNewDiv" class="showNewDiv" ng-cloak>
+    <div ng-class="{ 'fadeIn': showNewDiv }" class="showNewDiv" ng-cloak>
       Wow isn't that cool :D
     </div>
     <p>
@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- loads javascript from the vendor file  -->
   <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
   <!-- this also includes the ace editor -->
