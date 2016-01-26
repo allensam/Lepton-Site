@@ -22,9 +22,12 @@ var javascriptModule = angular.module('javascriptModule', []);
     try {
       eval(input + " passed = true;");
     } catch(e) {
-      eval("$scope." + name + " = " + "'" + e.message + "'" + ";");
+      document.getElementById('style-' + name).style.color = "red";
+      var finalMessage = e.message.charAt(0).toUpperCase() + e.message.slice(1);
+      eval("$scope." + name + " = " + "'" + finalMessage + ".'" + ";");
     } finally {
       if (passed == true) {
+        document.getElementById('style-' + name).style.color = "#aaa";
         eval("$scope." + name + " = 'no Errors! :)';");
       }
     }

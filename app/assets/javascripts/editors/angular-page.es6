@@ -7,7 +7,7 @@ var start_angular_js = new Editor("start_angular_js", "javascript");
 var start_angular_html = new Editor("start_angular_html", "html");
 var start_angular_js_text = `// the varible is the name the module is accesible in the javascript
 // the name inside the module is the name used to bootstrap the document to the javascript
-// the names are typically kept the same unless you want to confuse the fuck out of yourself
+// the names are typically kept the same unless you want to confuse yourself
 // the brackets you can put other modules
 dvar moduleName = angular.module('moduleName', []);
 
