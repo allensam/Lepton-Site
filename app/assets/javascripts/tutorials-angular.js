@@ -1,9 +1,16 @@
 'use strict';
 // google-analytics
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+(function(i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-72779894-1', 'auto');
 ga('send', 'pageview');
 
@@ -13,7 +20,7 @@ var javascriptModule = angular.module('javascriptModule', []);
  * @param $scope [string] injects angular scope
  * @description confusing crap tbh
  */
- javascriptModule.controller('testing', ['$scope', function($scope) {
+javascriptModule.controller('testing', ['$scope', function($scope) {
   $scope.showNewDiv = false;
   $scope.runCode = function(name) {
     var input_error = "$scope." + name + " = 'Error feedback is here!';";
@@ -23,7 +30,7 @@ var javascriptModule = angular.module('javascriptModule', []);
     var input = eval(name + ".return_text_in_editor();");
     try {
       eval(input + " passed = true;");
-    } catch(e) {
+    } catch (e) {
       document.getElementById('style-' + name).style.color = "red";
       var finalMessage = e.message.charAt(0).toUpperCase() + e.message.slice(1);
       eval("$scope." + name + " = " + "'" + finalMessage + ".'" + ";");
@@ -37,31 +44,36 @@ var javascriptModule = angular.module('javascriptModule', []);
   }
 }]);
 
-function getHtmlBindClasses() {
-  var ids = [];
-  var binds =  document.getElementsByClassName('bind-html');
-  for (var i = 0; i < binds.length; i++) {
-    var id = binds[i].id;
-      var string = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
-      return string
-  }
-}
 
 var htmlModule = angular.module('htmlModule', []);
 htmlModule.config(['$sceProvider', function($sceProvider) {
-  // Completely disable SCE.  For demonstration purposes only!
-  // Do not use in new projects.
+  //disables html bind security
   $sceProvider.enabled(false);
 }]);
-htmlModule.run(['$rootScope', function ($rootScope) {
-  document.onkeyup = function(evt) {
-    var input = getHtmlBindClasses();
-      eval(input)
-      $rootScope.$digest();
+
+htmlModule.controller('htmlBind', ['$rootScope', '$scope', function($rootScope, $scope) {
+  $scope.binderFunction = function(id) {
+    var htmlString = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
+    eval(htmlString);
   }
+  startUpListener();
 }]);
-htmlModule.controller('htmlBind', ['$rootScope', function ($rootScope) {
-    var input = getHtmlBindClasses();
-    eval(input)
-}]);
+
+// listens for keyup on specific elements
+function keyUpEventListener(e) {
+  var id = e.getAttribute('id');
+  console.log(id)
+  angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
+  angular.element(document.getElementById('htmlBind')).scope().$apply();
+}
+
+// inits html bind when controller is fully loaded
+function startUpListener() {
+  var ids = [];
+  var binds = document.getElementsByClassName('bind-html');
+  for (var i = 0; i < binds.length; i++) {
+    var id = binds[i].id;
+    angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
+  }
+}
 angular.module("bothModules", ["javascriptModule", "htmlModule"]);

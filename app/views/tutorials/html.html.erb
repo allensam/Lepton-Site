@@ -2,12 +2,12 @@
 
 <body ng-app="htmlModule">
   <div>
-    <div ng-controller="htmlBind">
+    <div ng-controller="htmlBind" id="htmlBind">
       <span ng-bind-html="htmlExample"></span>
       <br>
       <br>
       <!-- editor that binds html to page -->
-      <div class="bind-html" id="htmlExample">
+      <div class="bind-html" id="htmlExample" onkeyup="keyUpEventListener(this);">
       </div>
     </div>
   </div>
