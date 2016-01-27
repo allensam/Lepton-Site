@@ -12,7 +12,7 @@ var javascriptModule = angular.module('javascriptModule', []);
 /** controller for this page
  * @param $scope [string] injects angular scope
  */
- javascriptModule.controller('testing', function($scope) {
+ javascriptModule.controller('testing', ['$scope', function($scope) {
   $scope.showNewDiv = false;
   $scope.runCode = function(name) {
     var input_error = "$scope." + name + " = 'Error feedback is here!';";
@@ -33,7 +33,7 @@ var javascriptModule = angular.module('javascriptModule', []);
     }
 
   }
-});
+}]);
 
 function getHtmlBindClasses() {
   var ids = [];
@@ -46,11 +46,11 @@ function getHtmlBindClasses() {
 }
 
 var htmlModule = angular.module('htmlModule', []);
-htmlModule.config(function($sceProvider) {
+htmlModule.config(['$sceProvider', function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
   // Do not use in new projects.
   $sceProvider.enabled(false);
-});
+}]);
 htmlModule.run(['$rootScope', function ($rootScope) {
   document.onkeyup = function(evt) {
     var input = getHtmlBindClasses();
