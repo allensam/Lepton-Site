@@ -50,16 +50,16 @@ htmlModule.config(function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
   // Do not use in new projects.
   $sceProvider.enabled(false);
-})
-.run(function ($rootScope) {
+});
+htmlModule.run(['$rootScope', function ($rootScope) {
   document.onkeyup = function(evt) {
     var input = getHtmlBindClasses();
       eval(input)
       $rootScope.$digest();
   }
-})
-.controller('htmlBind', function ($rootScope) {
+}]);
+htmlModule.controller('htmlBind', ['$rootScope', function ($rootScope) {
     var input = getHtmlBindClasses();
     eval(input)
-});
+}]);
 angular.module("bothModules", ["javascriptModule", "htmlModule"]);
