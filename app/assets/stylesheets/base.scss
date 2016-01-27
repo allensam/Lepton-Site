@@ -4,7 +4,7 @@
 @import "reset";
 @import "mixins";
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin: auto;
     line-height: 1.6em;
     padding: 20px 0;
@@ -15,7 +15,7 @@ h2 {
     padding: 20px 0;
 }
 h4 {
-    font-size: 35px;
+    font-size: 25px;
     line-height: 1.6em;
     padding: 20px 0;
 }
@@ -27,10 +27,35 @@ p {
     line-height: 1.6em;
     padding-bottom: 20px;
 }
-a {
-    color: black;
+.home-view {
+    margin: 50px auto;
+    width: 60%;
+}
+.tut-box {
+    width: calc(50% - 25px);
+    background-color: #9b59b6;
+    display: inline-block;
+    margin: 12.5px 0;
+    transition: all ease 0.3s;
+    border-radius: 4px;
+}
+.tut-box a {
+    color: #fff;
     text-decoration: none;
 }
-a:hover {
-    background-color: red;
+.tut-box p {
+    padding: 25px 0;
+    text-align: center;
+}
+.box-1 {
+    margin-right: 25px;
+}
+.tut-box:hover {
+    transition: all ease 0.3s;
+    box-shadow: 0 0 5px #555;
+}
+@media (max-width: 50em) {
+    .home-view {
+        width: 90%;
+    }
 }
