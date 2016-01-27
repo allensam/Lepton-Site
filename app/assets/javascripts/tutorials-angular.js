@@ -77,3 +77,9 @@ function startUpListener() {
   }
 }
 angular.module("bothModules", ["javascriptModule", "htmlModule"]);
+
+angular.element(document).ready(function() {
+  var angularModule = document.getElementById('ng-app');
+  var moduleName = angularModule.getAttribute('data-module');
+  angular.bootstrap(angularModule, [moduleName]);
+});

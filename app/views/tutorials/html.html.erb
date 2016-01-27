@@ -1,18 +1,12 @@
-<html>
-
-<body ng-app="htmlModule">
-  <div>
-    <div ng-controller="htmlBind" id="htmlBind">
-      <span ng-bind-html="htmlExample"></span>
-      <br>
-      <br>
-      <!-- editor that binds html to page -->
-      <div class="bind-html" id="htmlExample" onkeyup="keyUpEventListener(this);">
-      </div>
+<div id="ng-app" data-module="htmlModule">
+  <div ng-controller="htmlBind" id="htmlBind">
+    <span ng-bind-html="htmlExample"></span>
+    <br>
+    <br>
+    <!-- editor that binds html to page -->
+    <div class="bind-html" id="htmlExample" onkeyup="keyUpEventListener(this);">
     </div>
   </div>
-  <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'editors/html-page', 'data-turbolinks-track' => true %>
-</body>
-
-</html>
+</div>
+<%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'editors/html-page', 'data-turbolinks-track' => true %>
