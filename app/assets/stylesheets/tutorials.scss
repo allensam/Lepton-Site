@@ -19,8 +19,8 @@
 }
 .tab {
   color: white;
-  float: left;
-  height: 50px;
+  display: table-row-group;
+  height: 30px;
   width: 50px;
   background-color: black;
 }
@@ -46,6 +46,8 @@
   height: 0;
   display: none;
 }
+
+/* FADE IN STUFF FOR FIRST DIV */
 .fadeIn {
   height: 30px;
   display: block;

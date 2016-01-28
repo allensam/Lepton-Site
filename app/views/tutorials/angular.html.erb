@@ -7,6 +7,9 @@
   </p>
   <br>
   <div ng-controller="testing">
+    <form>
+      <input placeholder="20" min="8" max="30" type="number" onchange="changeEditorFontSize(this.value)" />
+    </form>
     <div ng-class="{ 'fadeIn': showNewDiv }" class="showNewDiv" ng-cloak>
       Wow isn't that cool :D
     </div>

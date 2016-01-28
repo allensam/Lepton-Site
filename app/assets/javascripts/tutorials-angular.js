@@ -14,6 +14,15 @@
 ga('create', 'UA-72779894-1', 'auto');
 ga('send', 'pageview');
 
+function changeEditorFontSize(value) {
+  var binds = document.getElementsByClassName('all-editors-class');
+  for (var i = 0; i < binds.length; i++) {
+    console.log(binds[i].id)
+    document.getElementById(binds[i].id).style.fontSize = value;
+  }
+}
+
+
 // initiates javascript module
 var javascriptModule = angular.module('javascriptModule', []);
 /** controller for this page
@@ -56,19 +65,18 @@ htmlModule.controller('htmlBind', ['$rootScope', '$scope', function($rootScope, 
     var htmlString = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
     eval(htmlString);
   }
-  startUpListener();
+  controllerStartUpListener();
 }]);
 
 // listens for keyup on specific elements
 function keyUpEventListener(e) {
   var id = e.getAttribute('id');
-  console.log(id)
   angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
   angular.element(document.getElementById('htmlBind')).scope().$apply();
 }
 
 // inits html bind when controller is fully loaded
-function startUpListener() {
+function controllerStartUpListener() {
   var ids = [];
   var binds = document.getElementsByClassName('bind-html');
   for (var i = 0; i < binds.length; i++) {
