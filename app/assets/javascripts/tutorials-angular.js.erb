@@ -34,11 +34,12 @@ dependenciesModule.controller('fontSize', ['$scope', function ($scope) {
     }
   }
 }]);
-dependenciesModule.directive('changeFontSize', function() {
+dependenciesModule.directive('changeFontSize', [function() {
   return {
+    restrict: 'E',
     templateUrl: '<%= asset_path("fontsize.html") %>'
   };
-});
+}]);
 
 // initiates javascript module
 var javascriptModule = angular.module('javascriptModule', ['dependenciesModule']);
