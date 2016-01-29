@@ -19,17 +19,21 @@
 }
 #start_angular_js {
   @extend .all-editors-class;
-  height: 400px;
+  position: absolute;
+  height: 450px;
   width: 60%;
 }
 #start_angular_html {
   @extend .all-editors-class;
-  height: 20%;
+  width: 60%;
+  position: absolute;
+  height: 450px;
 }
 
 // HTML PAGE
 #htmlExample {
   @extend .all-editors-class;
+  width: 60%;
   position: absolute;
   height: 200px;
   width: 400px;

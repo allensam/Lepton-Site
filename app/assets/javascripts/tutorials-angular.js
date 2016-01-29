@@ -14,17 +14,28 @@
 ga('create', 'UA-72779894-1', 'auto');
 ga('send', 'pageview');
 
-function changeEditorFontSize(value) {
+function changeAllFontSizes(value) {
   var binds = document.getElementsByClassName('all-editors-class');
   for (var i = 0; i < binds.length; i++) {
     console.log(binds[i].id)
-    document.getElementById(binds[i].id).style.fontSize = value;
+    document.getElementById(binds[i].id).style.fontSize = value.toString() + 'px';
   }
 }
-
+var dependenciesModule = angular.module('dependenciesModule', [])
+dependenciesModule.controller('fontSize', ['$scope', function ($scope) {
+  $scope.fontSizeValue = 20;
+  var fontsize = $scope.fontSizeValue;
+  $scope.changeEditorFontSize = function () {
+    try {
+      changeAllFontSizes($scope.fontSizeValue);
+    } catch(e) {
+      console.log(e.message)
+    }
+  }
+}]);
 
 // initiates javascript module
-var javascriptModule = angular.module('javascriptModule', []);
+var javascriptModule = angular.module('javascriptModule', ['dependenciesModule']);
 /** controller for this page
  * @param $scope [string] injects angular scope
  * @description confusing crap tbh
@@ -54,7 +65,7 @@ javascriptModule.controller('testing', ['$scope', function($scope) {
 }]);
 
 
-var htmlModule = angular.module('htmlModule', []);
+var htmlModule = angular.module('htmlModule', ['dependenciesModule']);
 htmlModule.config(['$sceProvider', function($sceProvider) {
   //disables html bind security
   $sceProvider.enabled(false);
@@ -84,7 +95,7 @@ function controllerStartUpListener() {
     angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
   }
 }
-angular.module("bothModules", ["javascriptModule", "htmlModule"]);
+var bothModules = angular.module("bothModules", ["javascriptModule", "htmlModule"]);
 
 angular.element(document).ready(function() {
   var angularModule = document.getElementById('ng-app');

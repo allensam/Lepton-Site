@@ -24,6 +24,16 @@ button {
     border-radius: 4px;
     margin-bottom: 20px;
 }
+input {
+  border: 1px solid #b7b7b7;
+  color: black
+  background: rgba(252,252,252,1);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 // Font Variables
 /*$roboto-slab: 'Roboto Slab', serif;

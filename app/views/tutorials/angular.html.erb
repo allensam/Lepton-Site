@@ -7,9 +7,16 @@
   </p>
   <br>
   <div ng-controller="testing">
-    <form>
-      <input placeholder="20" min="8" max="30" type="number" onchange="changeEditorFontSize(this.value)" />
+    <div ng-show="showFontSizeWarning">
+      Font size must be inbetween 8 and 30!
+    </div>
+    <form ng-controller="fontSize" name="fontForm" ng-cloak>
+      <input name="numberIn" type="number" ng-model="fontSizeValue" min="8" max="23" required ng-keyup="changeEditorFontSize()"/>
+      <div ng-show="!fontForm.numberIn.$valid">
+          Value must be greater than 8 and less than 25
+      </div>
     </form>
+
     <div ng-class="{ 'fadeIn': showNewDiv }" class="showNewDiv" ng-cloak>
       Wow isn't that cool :D
     </div>
@@ -30,7 +37,6 @@
     <div class="tab-wrap">
       <div class="tab" data-tab-reference="tab_1">app.js</div>
       <div class="tab" data-tab-reference="tab_2">index.html</div>
-      <br>
       <div class="tab-section active" data-tab-id="tab_1">
         <div class="all-editors-class" data-tab-name="section-one" id="start_angular_js"></div>
       </div>

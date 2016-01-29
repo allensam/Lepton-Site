@@ -61,8 +61,6 @@ function setup_tabs() {
   }
 }
 
-// document.getElementsByClassName('all-editors-class').style.fontSize='40px';
-// document.getElementById('example_of_angular').syle.fontSize='40px';
 //listen for events/ window on load
 window.addEventListener ?
 window.addEventListener("load",setup_tabs(),false) :
