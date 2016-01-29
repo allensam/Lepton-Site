@@ -1,21 +1,14 @@
 <div id="ng-app" data-module="bothModules" class="home">
   <h2>AngularJS Tutorial</h2>
   <p>
-    Welcome to the Angular tutorial! This tutorial will teach you how to use AngularJS. AngularJS is a Javascript framework. If you haven't learned the basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For starters, Angular is a platform
-    that binds the Javascript to the HTML and the HTML to the Javascript. This allows you to call Javascript functions from anywhere in the code on any sort of event, or modify the HTML with Javascript. We will cover that later but for now, let's dive
-    right in!
+    Welcome to the Angular tutorial! This tutorial will teach you how to use AngularJS. AngularJS is a Javascript framework. If you haven't learned the basics of Javascript I'd HIGHLY recommend learning a bit of Javascript. For starters, Angular is a
+    platform that binds the Javascript to the HTML and the HTML to the Javascript. This allows you to call Javascript functions from anywhere in the code on any sort of event, or modify the HTML with Javascript. We will cover that later but for now,
+    let's dive right in!
   </p>
   <br>
   <div ng-controller="testing">
-    <div ng-show="showFontSizeWarning">
-      Font size must be inbetween 8 and 30!
+    <div change-font-size>
     </div>
-    <form ng-controller="fontSize" name="fontForm" ng-cloak>
-      <input name="numberIn" type="number" ng-model="fontSizeValue" min="8" max="23" required ng-keyup="changeEditorFontSize()"/>
-      <div ng-show="!fontForm.numberIn.$valid">
-          Value must be greater than 8 and less than 25
-      </div>
-    </form>
 
     <div ng-class="{ 'fadeIn': showNewDiv }" class="showNewDiv" ng-cloak>
       Wow isn't that cool :D
@@ -33,7 +26,8 @@
     <p>
       what you saw was one of the main things angular wants to acomplish the binding of data. What does this mean? Basically Angular wants important data to be able to be accessed from both the javascript and html.
     </p>
-    <br> Now it's time to dive right in on how to creat an angular app!
+    <br>
+    Now it's time to dive right in on how to creat an angular app!
     <div class="tab-wrap">
       <div class="tab" data-tab-reference="tab_1">app.js</div>
       <div class="tab" data-tab-reference="tab_2">index.html</div>

@@ -1,3 +1,4 @@
+//= depend_on_asset "fontsize.html"
 'use strict';
 // google-analytics
 (function(i, s, o, g, r, a, m) {
@@ -33,6 +34,11 @@ dependenciesModule.controller('fontSize', ['$scope', function ($scope) {
     }
   }
 }]);
+dependenciesModule.directive('changeFontSize', function() {
+  return {
+    templateUrl: '<%= asset_path("fontsize.html") %>'
+  };
+});
 
 // initiates javascript module
 var javascriptModule = angular.module('javascriptModule', ['dependenciesModule']);
