@@ -28,6 +28,10 @@ class Editor {
   return_text_in_editor() {
       return this.name.getValue();
   }
+  css_return_text_in_editor(htmlString) {
+    var cssString = this.name.getValue();
+    return htmlString + "<style>" + cssString + "</style>";
+  }
   /**
   * @param input [string] the text that goes in the eidtor
   * @return set value of editor

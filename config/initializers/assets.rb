@@ -13,4 +13,5 @@ Rails.application.config.assets.precompile += %w( compile-routes/super-compile-r
 Rails.application.config.assets.precompile += %w( editors/angular-page.js )
 Rails.application.config.assets.precompile += %w( editors/html-page.js )
 Rails.application.config.assets.precompile += %w( editors/javascript-page.js )
+Rails.application.config.assets.precompile += %w( editors/css-page.js )
 Rails.application.config.assets.precompile += %w( templates/* )

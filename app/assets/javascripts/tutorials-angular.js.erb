@@ -18,7 +18,6 @@ ga('send', 'pageview');
 function changeAllFontSizes(value) {
   var binds = document.getElementsByClassName('all-editors-class');
   for (var i = 0; i < binds.length; i++) {
-    console.log(binds[i].id)
     document.getElementById(binds[i].id).style.fontSize = value.toString() + 'px';
   }
 }
@@ -83,35 +82,59 @@ htmlModule.controller('htmlBind', ['$rootScope', '$scope', function($rootScope, 
     var htmlString = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
     eval(htmlString)
     }
-  controllerStartUpListener();
+  htmlControllerStartUpListener();
 }]);
 
 // listens for keyup on specific elements
-function keyUpEventListener(e) {
+function htmlKeyUpEventListener(e) {
   var id = e.getAttribute('id');
   angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
   angular.element(document.getElementById('htmlBind')).scope().$apply();
 }
 
 // inits html bind when controller is fully loaded
-function controllerStartUpListener() {
-  var ids = [];
-  var binds = document.getElementsByClassName('bind-html');
-  for (var i = 0; i < binds.length; i++) {
-    var id = binds[i].id;
+function htmlControllerStartUpListener() {
+  var htmlBinds = document.getElementsByClassName('bind-html');
+  for (var i = 0; i < htmlBinds.length; i++) {
+    var id = htmlBinds[i].id;
     angular.element(document.getElementById('htmlBind')).scope().binderFunction(id);
   }
 }
 var bothModules = angular.module("bothModules", ["javascriptModule", "htmlModule"]);
 
-function ngBootstrap() {
+var cssModule = angular.module("cssModule", ["dependenciesModule"]);
+cssModule.config(['$sceProvider', function($sceProvider) {
+  //disables html bind security
+  $sceProvider.enabled(false);
+}]);
+
+cssModule.controller('cssBind', ['$rootScope', '$scope', function($rootScope, $scope) {
+  $scope.binderFunction = function(id) {
+
+    var cssString = "$rootScope." + id + " = " + id + ".css_return_text_in_editor(" + "html" + id  + "); ";
+    eval(cssString)
+    }
+  cssControllerStartUpListener();
+}]);
+
+function cssKeyUpEventListener(e) {
+  var id = e.getAttribute('id');
+  angular.element(document.getElementById('cssBind')).scope().binderFunction(id);
+  angular.element(document.getElementById('cssBind')).scope().$apply();
+}
+
+function cssControllerStartUpListener() {
+  var cssBinds = document.getElementsByClassName('bind-css');
+  for (var i = 0; i < cssBinds.length; i++) {
+    var id = cssBinds[i].id;
+    angular.element(document.getElementById('cssBind')).scope().binderFunction(id);
+  }
+}
+
+
+//listen for events/ window on load
+angular.element(document).ready(function() {
   var angularModule = document.getElementById('ng-app');
   var moduleName = angularModule.getAttribute('data-module');
   angular.bootstrap(angularModule, [moduleName]);
-};
-//listen for events/ window on load
-angular.element(document).ready(function() {
-  window.addEventListener ?
-  window.addEventListener("page:load", ngBootstrap(),false) :
-  window.attachEvent && window.attachEvent("page:load", ngBootstrap());
 });

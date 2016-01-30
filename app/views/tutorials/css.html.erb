@@ -1,1 +1,16 @@
-<%= javascript_include_tag 'super-compile-route', 'data-turbolinks-track' => true %>
+<div id="ng-app" data-module="cssModule">
+  <div ng-controller="cssBind" id="cssBind">
+    <change-font-size>
+    </change-font-size>
+    <span ng-bind-html="cssExample"></span>
+    <br>
+    <br>
+    <!-- editor that binds css to page -->
+    <div class="bind-css all-editors-class" id="cssExample" onkeyup="cssKeyUpEventListener(this);">
+    </div>
+  </div>
+</div>
+</div>
+
+<%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'editors/css-page', 'data-turbolinks-track' => true %>

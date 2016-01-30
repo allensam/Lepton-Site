@@ -38,3 +38,8 @@
   height: 200px;
   width: 400px;
 }
+
+// CSS PAGE
+#cssExample {
+  @extend .all-editors-class;
+}
