@@ -81,8 +81,8 @@ htmlModule.config(['$sceProvider', function($sceProvider) {
 htmlModule.controller('htmlBind', ['$rootScope', '$scope', function($rootScope, $scope) {
   $scope.binderFunction = function(id) {
     var htmlString = "$rootScope." + id + " = " + id + ".return_text_in_editor(); ";
-    eval(htmlString);
-  }
+    eval(htmlString)
+    }
   controllerStartUpListener();
 }]);
 
@@ -104,8 +104,14 @@ function controllerStartUpListener() {
 }
 var bothModules = angular.module("bothModules", ["javascriptModule", "htmlModule"]);
 
-angular.element(document).ready(function() {
+function ngBootstrap() {
   var angularModule = document.getElementById('ng-app');
   var moduleName = angularModule.getAttribute('data-module');
   angular.bootstrap(angularModule, [moduleName]);
+};
+//listen for events/ window on load
+angular.element(document).ready(function() {
+  window.addEventListener ?
+  window.addEventListener("page:load", ngBootstrap(),false) :
+  window.attachEvent && window.attachEvent("page:load", ngBootstrap());
 });
