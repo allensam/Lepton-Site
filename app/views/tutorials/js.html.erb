@@ -1,5 +1,13 @@
-<body ng-app="javascriptModule">
-  <div id="javascriptExample"></div>
-  <%= javascript_include_tag 'super-compile-route', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'javascript-page', 'data-turbolinks-track' => true %>
-</body>
+<div id="ng-app" data-module="javascriptModule">
+  <change-font-size>
+  </change-font-size>
+  <div ng-controller="testing">
+    <button ng-click="runCodeOutSide('javascriptExample')">Click to run!</button>
+    <div class="all-editors-class" id="javascriptExample"></div>
+    <div class="errorDiv" id="style-javascriptExample" ng-cloak>
+      {{javascriptExample || 'Error feedback will be located here!'}}
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'editors/javascript-page', 'data-turbolinks-track' => true %>

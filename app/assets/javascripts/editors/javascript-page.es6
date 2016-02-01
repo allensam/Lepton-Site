@@ -15,6 +15,4 @@ for (var i = 0; i < newArray.length; i++) {
     string = string + newArray[i]
 }
 document.getElementById('stringcombine').val() = string;
-`)
-
-s
+`);

@@ -33,28 +33,44 @@ var javascriptModule = angular.module('javascriptModule', ['dependenciesModule']
  * @description confusing crap tbh
  */
 javascriptModule.controller('testing', ['$scope', function($scope) {
-  $scope.showNewDiv = false;
   $scope.runCode = function(name) {
-    var input_error = "$scope." + name + " = 'Error feedback is here!';";
-    eval(input_error);
     // creates varible passed is eval to true at the end of
     var passed = false;
     var input = eval(name + ".return_text_in_editor();");
     try {
       eval(input + " passed = true;");
     } catch (e) {
+      console.log(e);
       document.getElementById('style-' + name).style.color = "red";
       var finalMessage = e.message.charAt(0).toUpperCase() + e.message.slice(1);
       eval("$scope." + name + " = " + "'" + finalMessage + ".'" + ";");
     } finally {
-      if (passed == true) {
+
+    }
+
+  }
+  $scope.runCodeOutSide = function(name) {
+    var input = eval(name + ".return_text_in_editor();");
+    try {
+      var passed = outSideRunner(input);
+    } catch(e) {
+      document.getElementById('style-' + name).style.color = "red";
+      var finalMessage = e.message.charAt(0).toUpperCase() + e.message.slice(1);
+      eval("$scope." + name + " = " + "'" + finalMessage + ".'" + ";");
+    } finally {
+      if (passed === true) {
         document.getElementById('style-' + name).style.color = "#aaa";
         eval("$scope." + name + " = 'no Errors! :)';");
       }
     }
-
   }
 }]);
+
+function outSideRunner(input) {
+  var passed = false;
+  eval(input + " passed = true;");
+  return passed
+}
 
 
 var htmlModule = angular.module('htmlModule', ['dependenciesModule']);
@@ -117,8 +133,6 @@ function cssControllerStartUpListener() {
   }
 }
 
-
-//listen for events/ window on load
 angular.element(document).ready(function() {
   var angularModule = document.getElementById('ng-app');
   var moduleName = angularModule.getAttribute('data-module');
