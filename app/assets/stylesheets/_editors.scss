@@ -39,11 +39,13 @@
   @extend .all-editors-class;
   width: 60%;
   position: absolute;
-  height: 200px;
-  width: 400px;
+  width: 800px;
+  height: 400px;
 }
 
 // CSS PAGE
 #cssExample {
   @extend .all-editors-class;
+  width: 600px;
+  height: 500px;
 }

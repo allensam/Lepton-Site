@@ -2,12 +2,40 @@
   <div ng-controller="htmlBind" id="htmlBind">
     <change-font-size>
     </change-font-size>
+    <p> Welcome to the html tutorial! html is not a programming language but "markers"
+      that tell the browser to do something for each specific spot this is an html example
+      the "style" tag at the end marks some where some css goes. All it does is add skin to
+      html and make it look pretty.</p>
+    </p>
     <span ng-bind-html="htmlExample"></span>
     <br>
     <br>
     <!-- editor that binds html to page -->
     <div class="bind-html" id="htmlExample" onkeyup="htmlKeyUpEventListener(this);">
     </div>
+
+    <p> What you are seen here is basically a bracket followed by div which in html
+      you think it as a literal rectangle. It autmatically conforms to the conent size
+      but one can make it bigger if they'd like.
+    </p>
+    <p> Since this tutorial is mostly about memorizing what certain things do this will go fast
+      show many different tags in a short period of time. Do not freak out if it moves too fast
+      take your time and test things out it's okay if you don't remember tags in the future you can
+      look them up. There will be more tags than this tutorial covers, but that's because some tags
+      aren't used because styling becomes more customized and true to yourself. However it is likly
+      that you will see these other tags and that's okay!
+    </p>
+    <p> Here comes the big load of information some of these things inside the tag you learn in different
+      tutorials.
+    </p>
+    <div class="bind-html" id="bigLoad" onkeyup="htmlKeyUpEventListener(this);">
+    </div>
+
+    <br>
+    <span ng-bind-html="bigLoad"></span>
+
+
+
   </div>
 </div>
 <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => false %>
