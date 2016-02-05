@@ -40,6 +40,7 @@ bigLoad.set_editor_text(`<div>
   </h4>It keeps getting smaller</h4>
   <h5>So smol</h5>
   <h6>Finally the last one!</h6>
+  <br>
   <!--
     multi line comments!
     you learn more about how to style these in css
@@ -52,6 +53,7 @@ bigLoad.set_editor_text(`<div>
       <li>More!!!</li>
     </ul>
   </div>
+  <br>
   <!-- learn how to make buttons do stuff in javascript -->
   <button> DON'T CLICK THIS... it doesn't do anything</button>
 

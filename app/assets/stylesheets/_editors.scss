@@ -37,18 +37,16 @@
 // HTML PAGE
 #htmlExample {
   @extend .all-editors-class;
-  width: 60%;
-  width: 800px;
   height: 400px;
 }
 
 #bigLoad {
   @extend .all-editors-class;
+  height: 750px;
 }
 
 // CSS PAGE
 #cssExample {
   @extend .all-editors-class;
-  width: 600px;
   height: 500px;
 }
