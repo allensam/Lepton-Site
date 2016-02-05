@@ -18,8 +18,14 @@
   display: block;
 }
 .tab {
+  text-align: center;
+  position: relative;
+  padding: 7px 30px;
+  float: left;
+  display:block;
   color: white;
-  display: table-row-group;
+  border-right: 2px solid white;
+  /*display: table-row-group;*/
   height: 30px;
   width: 50px;
   background-color: black;
