@@ -28,6 +28,10 @@ class Editor {
   return_text_in_editor() {
       return this.name.getValue();
   }
+  css_return_text_in_editor(htmlString) {
+    var cssString = this.name.getValue();
+    return htmlString + "<style>" + cssString + "</style>";
+  }
   /**
   * @param input [string] the text that goes in the eidtor
   * @return set value of editor
@@ -61,8 +65,6 @@ function setup_tabs() {
   }
 }
 
-// document.getElementsByClassName('all-editors-class').style.fontSize='40px';
-// document.getElementById('example_of_angular').syle.fontSize='40px';
 //listen for events/ window on load
 window.addEventListener ?
 window.addEventListener("load",setup_tabs(),false) :

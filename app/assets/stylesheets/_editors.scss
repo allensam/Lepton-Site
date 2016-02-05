@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+// JAVASCRIPT PAGE
+#javascriptExample {
+  @extend .all-editors-class;
+}
 
 // ANGULAR PAGE
 #example_of_angular {
@@ -34,7 +38,17 @@
 #htmlExample {
   @extend .all-editors-class;
   width: 60%;
-  position: absolute;
-  height: 200px;
-  width: 400px;
+  width: 800px;
+  height: 400px;
+}
+
+#bigLoad {
+  @extend .all-editors-class;
+}
+
+// CSS PAGE
+#cssExample {
+  @extend .all-editors-class;
+  width: 600px;
+  height: 500px;
 }

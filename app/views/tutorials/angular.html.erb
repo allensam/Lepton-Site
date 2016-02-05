@@ -7,8 +7,8 @@
   </p>
   <br>
   <div ng-controller="testing">
-    <div change-font-size>
-    </div>
+    <change-font-size>
+    </change-font-size>
 
     <div ng-class="{ 'fadeIn': showNewDiv }" class="showNewDiv" ng-cloak>
       Wow isn't that cool :D
@@ -24,7 +24,11 @@
       {{example_of_angular || 'Error feedback will be located here!'}}
     </div>
     <p>
+<<<<<<< HEAD
       What you saw was one of the main things angular wants to acomplish, the binding of data. What does this mean? Basically Angular wants important data to be able to be accessed from both the JavaScript and HTML.
+=======
+      What you just saw was one of the main things angular wants to accomplish data binding. What does this mean? Basically, Angular wants important data to be able to be accessed from both the JavaScript and HTML.
+>>>>>>> origin/master
     </p>
     <br>
     Now it's time to dive right in on how to create an angular app!
@@ -43,6 +47,6 @@
   <!-- loads javascript from the vendor file  -->
   <!-- ONLY LOAD ON THIS PAGE OR OTHER JAVAVSCRIPT TUTORIALS -->
   <!-- this also includes the ace editor -->
-  <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'editors/angular-page', 'data-turbolinks-track' => true %>
 </div>
