@@ -9,7 +9,7 @@ var start_angular_js_text = `// the varible is the name the module is accesible 
 // the name inside the module is the name used to bootstrap the document to the javascript
 // the names are typically kept the same unless you want to confuse yourself
 // the brackets you can put other modules
-dvar moduleName = angular.module('moduleName', []);
+var moduleName = angular.module('moduleName', []);
 
 moduleName.run(function () {
   //code run on angular loaded and document bootstrapped
