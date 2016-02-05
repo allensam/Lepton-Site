@@ -1,0 +1,8 @@
+Change the font size to a confortable size here! You can always come back to change it
+<br>
+<form ng-controller="fontSize" name="fontForm" ng-cloak>
+  <input name="numberIn" type="number" ng-model="fontSizeValue" min="8" max="23" required ng-keyup="changeEditorFontSize()"/>
+  <div ng-show="!fontForm.numberIn.$valid">
+    Value must be greater than 8 and less than 23
+  </div>
+</form>
