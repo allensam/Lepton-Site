@@ -38,9 +38,12 @@
 #htmlExample {
   @extend .all-editors-class;
   width: 60%;
-  position: absolute;
   width: 800px;
   height: 400px;
+}
+
+#bigLoad {
+  @extend .all-editors-class;
 }
 
 // CSS PAGE
