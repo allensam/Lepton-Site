@@ -6,6 +6,7 @@ cssExample.set_editor_text(`
   width: 200px;
   padding: 10px;
   background-color: #333;
+  color:white;
 }
 #secondDiv {
   background-color: red;
@@ -13,9 +14,9 @@ cssExample.set_editor_text(`
   `);
 var htmlcssExample = `
 <div id="firstDiv">
-  test
+  Lookie here coolness
 </div>
 <div id="secondDiv">
-  test
+  more stuff
 </div>
 `

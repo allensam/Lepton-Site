@@ -1,12 +1,16 @@
 <div id="ng-app" class="home" data-module="javascriptModule">
+  <h2>JavaScript Tutorial</h2>
   <change-font-size>
   </change-font-size>
+  <br>
   <div ng-controller="testing">
     <button ng-click="runCodeOutSide('javascriptExample')">Click to run!</button>
     <div class="all-editors-class" id="javascriptExample"></div>
     <div class="errorDiv" id="style-javascriptExample" ng-cloak>
       {{javascriptExample || 'Error feedback will be located here!'}}
     </div>
+    <div id="helloworld"></div>
+    <div id="stringcombine"></div>
   </div>
 </div>
 <%= javascript_include_tag 'compile-routes/super-compile-route', 'data-turbolinks-track' => false %>
