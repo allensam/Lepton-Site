@@ -9,9 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # UN TRUE --->application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( compile-routes/super-compile-route.js )
-Rails.application.config.assets.precompile += %w( editors/angular-page.js )
-Rails.application.config.assets.precompile += %w( editors/html-page.js )
-Rails.application.config.assets.precompile += %w( editors/javascript-page.js )
-Rails.application.config.assets.precompile += %w( editors/css-page.js )
-Rails.application.config.assets.precompile += %w( templates/* )
+# Rails.application.config.assets.precompile += %w( compile-routes/super-compile-route.js )
+# Rails.application.config.assets.precompile += %w( editors/angular-page.js )
+# Rails.application.config.assets.precompile += %w( editors/html-page.js )
+# Rails.application.config.assets.precompile += %w( editors/javascript-page.js )
+# Rails.application.config.assets.precompile += %w( editors/css-page.js )
+# Rails.application.config.assets.precompile += %w( templates/* )
+Rails.application.config.assets.paths << 'assets'
