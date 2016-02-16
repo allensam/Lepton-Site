@@ -2,7 +2,10 @@
 //this way we can write as miminal code as possible
 'use strict';
 //sets the path to the editor
-ace.config.set("basePath", "ace_editor");
+ace.config.set("basePath", "../assets/ace_editor");
+// ace.config.set("modePath", "ace_editor");
+// ace.config.set("workerPath", "ace_editor");
+// ace.config.set("themePath", "ace_editor");
 /**
 * The Editor class makes a new ace editor that can be modified
 * Note: changing theme was deprieciated as it makes it slower
@@ -42,6 +45,10 @@ class Editor {
 
   set_editor_rw(rwinput) {
     return this.name.setReadOnly(rwinput);
+  }
+
+  test_this_return() {
+    return this.name
   }
 }
 
