@@ -26,8 +26,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # This enables babel to compile ES6 code
-gem 'sprockets'
-gem 'sprockets-es6'
+# gem 'sprockets'
+# gem 'sprockets-es6'
 
 #for windows
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
