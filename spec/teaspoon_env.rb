@@ -55,7 +55,8 @@ Teaspoon.configure do |config|
     # a `_boot.html.erb` in your fixtures path, and adjust the config to `"/boot"` for instance.
     #
     # Available: boot, boot_require_js
-    suite.boot_partial = "boot"
+    # suite.boot_partial = "boot"
+    suite.boot_partial = '/boot_system_js'
 
     # Partial to be rendered in the body tag of the runner. You can define your own to create a custom body structure.
     suite.body_partial = "body"
@@ -65,7 +66,7 @@ Teaspoon.configure do |config|
     #suite.hook :fixtures, &proc{}
 
     # Determine whether specs loaded into the test harness should be embedded as individual script tags or concatenated
-    # into a single file. Similar to Rails' asset `debug: true` and `config.assets.debug = true` options. By default, 
+    # into a single file. Similar to Rails' asset `debug: true` and `config.assets.debug = true` options. By default,
     # Teaspoon expands all assets to provide more valuable stack traces that reference individual source files.
     #suite.expand_assets = true
 
