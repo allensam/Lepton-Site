@@ -16,19 +16,22 @@ import {Tabs} from tabs.js
 */
 export class Editor {
   //initializes the editor
-  constructor(name, mode, fontSize, write, tabs) {
-    this.name = ace.edit(name)
-    this.name.setTheme(`ace/theme/monokai`);
-    this.name.getSession().setMode(`ace/mode/${mode}`);
-    this.name.$blockScrolling = Infinity;
+  constructor(name, mode, write, tabs) {
+    this.name = name;
+    this.editor = ace.edit(name);
+    this.editor.setTheme(`ace/theme/monokai`);
+    this.editor.getSession().setMode(`ace/mode/${mode}`);
+    this.editor.$blockScrolling = Infinity;
+    this.write = write;
     this.tabs = tabs;
     writableTest(this.tabs);
+
   }
   get text() {
-    return this.name.getValue();
+    return this.editor.getValue();
   }
   set text(v) {
-    this.name.setValue(v);
+    this.editor.setValue(v);
   }
   get write() {
     return this.write;
@@ -36,7 +39,7 @@ export class Editor {
   set write(v) {
     this.write = v;
   }
-  writableTest(tabs) {
+  tabsTest(tabs) {
     if (tabs === true) {
       setUpTabs(tabs);
     }

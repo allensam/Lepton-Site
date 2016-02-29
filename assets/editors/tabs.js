@@ -1,6 +1,5 @@
 export class Tabs {
   constructor(editor, name) {
-    this.editor = editor;
     this.name = name;
   }
 
