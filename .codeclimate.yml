@@ -14,7 +14,9 @@ engines:
 ratings:
   paths:
   - app/**
+  - assets/**
 exclude_paths:
   - test/**
   - doc/**
   - config/**
+  - assets/jspm_packages/**
