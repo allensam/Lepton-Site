@@ -20,3 +20,5 @@ exclude_paths:
   - doc/**
   - config/**
   - assets/jspm_packages/**
+  - public/**
+  - vender/**
