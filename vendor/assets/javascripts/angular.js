@@ -3,6 +3,7 @@
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
+var angularLoaded = false;
 (function(window, document, undefined) {'use strict';
 
 /**
@@ -29848,10 +29849,10 @@ $provide.value("$locale", {
   "id": "en-us",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  var vf = getVF(n, opt_precision);  if (i == 1 && vf.v == 0) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
-}]);
 
   jqLite(document).ready(function() {
     angularInit(document, bootstrap);
+    var angularLoaded = true;
   });
 
 })(window, document);
