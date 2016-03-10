@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :mobile_device?
 
+  def mobile!
+    redirect_to root_path(:mobile => 1)
+  end
+  helper_method :mobile!
+
   def prepare_for_mobile
     session[:mobile_param] = params[:mobile] if params[:mobile]
     request.format = :mobile if mobile_device?

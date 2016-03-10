@@ -1,3 +1,6 @@
+<% if mobile_device? %>
+    <%= mobile! %>
+<% end %>
 <div id="ng-app" class="home" data-module="htmlModule">
   <div ng-controller="htmlBind" id="htmlBind">
     <h2>HTML Tutorial</h2>
