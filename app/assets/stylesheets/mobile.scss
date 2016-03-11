@@ -1,0 +1,13 @@
+.mobile-display {
+  display: block !important;
+  @media only screen and (min-width: 770px) {
+    display: none !important;
+  }
+}
+.rest-of-page {
+  display: none !important;
+  @media only screen and (min-width: 770px) {
+    display: block !important;
+  }
+
+}
