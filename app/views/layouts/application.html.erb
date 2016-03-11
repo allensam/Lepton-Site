@@ -4,11 +4,17 @@
   <title>YeezyCodes</title>
   <%= stylesheet_link_tag    '/assets/application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/assets/application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="mobile-display">
+  <p>Come back on a desktop yo</p>
+</div>
 
-<%= yield %>
+<div class="rest-of-page">
+  <%= yield %>
+</div>
 
 </body>
 </html>
