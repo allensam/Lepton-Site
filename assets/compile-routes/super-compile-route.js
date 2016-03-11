@@ -1,4 +1,5 @@
-//= require_tree ../../vendor/assets/javascripts/ace_editor
-//= require editors/editor-super.js
-//= require angular.js
-//= require tutorials-angular.js
+//3= require_tree ../../vendor/assets/javascripts/ace_editor
+//3= require editors/editor-super.js
+//3= require angular.js
+//3= require tutorials-angular.js
+
