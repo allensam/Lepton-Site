@@ -4,6 +4,7 @@ export class Tabs {
   }
 
 }
+//TODO convert functions to class
 function remove_active(parent) {
   let elems = parent.querySelectorAll('.active');
   for (let i = 0; i < elems.length; i++) {
