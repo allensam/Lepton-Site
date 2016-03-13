@@ -15,10 +15,12 @@
 */
 export class Editor {
   //initializes the editor
-  constructor(name, mode, writable) {
+  constructor(name, mode, writable = true) {
     this.name = name;
     this.writable = writable;
+    this.mode = mode;
     this.getTabs();
+
 
   }
   getTabs() {
@@ -37,7 +39,7 @@ export class Editor {
   init() {
     this.editor = ace.edit(name);
     this.editor.setTheme(`ace/theme/monokai`);
-    this.editor.getSession().setMode(`ace/mode/${mode}`);
+    this.editor.getSession().setMode(`ace/mode/${this.mode}`);
     this.editor.$blockScrolling = Infinity;
   }
   get text() {
