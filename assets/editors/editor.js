@@ -1,7 +1,6 @@
 //this page is to create a super class for editors
 //this way we can write as miminal code as possible
 //'use strict';
-import {Tabs} from 'tabs.js';
 /**
 * The Editor class makes a new ace editor that can be modified
 * Note: changing theme was deprieciated as it makes it slower
@@ -16,32 +15,35 @@ import {Tabs} from 'tabs.js';
 */
 export class Editor {
   //initializes the editor
-  constructor(name, mode, writable, tabs) {
+  constructor(name, mode, writable) {
     this.name = name;
+    this.writable = writable;
+    this.getTabs();
+
+  }
+  getTabs() {
+    let langs = document.getElementById(this.name)
+        .getAttribute('data-tabs');
+    let names = [];
+    if (langs.length != 1) {
+      names = document.getElementById(this.name)
+          .getAttribute('data-names');
+    }
+
+    this.makeTabs(langs, names);
+  }
+  makeTabs(langs, names) {
+  }
+  init() {
     this.editor = ace.edit(name);
     this.editor.setTheme(`ace/theme/monokai`);
     this.editor.getSession().setMode(`ace/mode/${mode}`);
     this.editor.$blockScrolling = Infinity;
-    this.writable = writable;
-    if (tabs > 1) {
-      new Tabs(this.name, tabs);
-    }
-    //this.tabs = tabs;
-    //tabsTest(this.tabs);
-
   }
   get text() {
     return this.editor.getValue();
   }
   set text(v) {
     this.editor.setValue(v);
-  }
-  tabsTest(tabs) {
-    if (tabs === true) {
-      setUpTabs(tabs);
-    }
-  }
-  setUpTabs(tabs) {
-    new Tabs(this.name);
   }
 }

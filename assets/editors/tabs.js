@@ -1,6 +1,14 @@
 export class Tabs {
-  constructor(editor, name) {
+  constructor(name, tabs) {
     this.name = name;
+    this.tabs = tabs;
+    this.getTabs();
+  }
+
+  getTabs();
+  addWrap(amount, e) {
+    let child = document.getElementById(e);
+    child.outerHTML =
   }
 
 }
