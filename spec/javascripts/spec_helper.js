@@ -14,7 +14,7 @@
 //= require jspm
 //= require_tree ../../vendor/assets/javascripts/ace_editor
 //= require editors/editor
-//f= require init
+//= require init
 //
 // Deferring execution
 // If you're using CommonJS, RequireJS or some other asynchronous library you can defer execution. Call
