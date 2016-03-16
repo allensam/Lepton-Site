@@ -1,4 +1,4 @@
-
+fixture.load('editor.html', append = false);
 export class Bind {
     constructor(ids, langs) {
         this.id = id;

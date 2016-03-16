@@ -19,7 +19,7 @@ export class Editor {
     this.name = name;
     this.writable = writable;
     this.mode = mode;
-    this.getTabs();
+    //this.getTabs();
 
 
   }
@@ -37,7 +37,7 @@ export class Editor {
   makeTabs(langs, names) {
   }
   init() {
-    this.editor = ace.edit(name);
+    this.editor = ace.edit(this.name);
     this.editor.setTheme(`ace/theme/monokai`);
     this.editor.getSession().setMode(`ace/mode/${this.mode}`);
     this.editor.$blockScrolling = Infinity;
