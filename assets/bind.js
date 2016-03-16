@@ -1,14 +1,19 @@
 fixture.load('editor.html', append = false);
 export class Bind {
-    constructor(ids, langs) {
+    constructor(id, lang) {
         this.id = id;
-        this.langs = langs;
+        this.lang = lang;
         this.getEditorText();
     }
 
+    updateBind() {
+        this.getEditorText();
+        this.setInnerHTML();
+    }
+
     getEditorText() {
-        text = this.id.text;
-        setInnerHTML(text);
+        let text = this.id.text;
+        let child =
     }
 
     setInnerHTML(text) {

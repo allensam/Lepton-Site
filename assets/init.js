@@ -19,7 +19,7 @@ import {Editor} from 'editors/editor.js';
 import {Bind} from 'bind.js';
 let editors = document.querySelectorAll('.e');
 var editorObj = {};
-(function initApp(e, d, obj) {
+export function initApp(e, d, obj) {
     for (let i = 0; i < e.length; i++) {
         let langs = e[i].getAttribute('data-langs');
         let el = e[i];
@@ -86,13 +86,11 @@ var editorObj = {};
     function test() {
         return "worked";
     }
-})(editors, document, editorObj);
 
+}
+initApp(editors, document, editorObj);
 //TODO put these in there
 autosize(editors);
 var evt = document.createEvent('onkeyup');
 evt.initEvent('autosize:update', true, false);
 editors.dispatchEvent(evt);
-
-//This is so that tests work
-export var init = initApp(editors, document, editorObj);

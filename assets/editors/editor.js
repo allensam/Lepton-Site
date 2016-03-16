@@ -13,6 +13,8 @@
 * @param tabs boolean true if theres tabs to the editor
 * @return it returns a new ace editor
 */
+import {Bind} from '../bind.js';
+import {Loading as loaded} from '../loading';
 export class Editor {
   //initializes the editor
   constructor(name, mode, writable = true) {
@@ -23,6 +25,7 @@ export class Editor {
 
 
   }
+  // move this to another file/elsewwhere
   getTabs() {
     let langs = document.getElementById(this.name)
         .getAttribute('data-tabs');
@@ -31,16 +34,15 @@ export class Editor {
       names = document.getElementById(this.name)
           .getAttribute('data-names');
     }
+  }
 
-    this.makeTabs(langs, names);
-  }
-  makeTabs(langs, names) {
-  }
   init() {
     this.editor = ace.edit(this.name);
     this.editor.setTheme(`ace/theme/monokai`);
     this.editor.getSession().setMode(`ace/mode/${this.mode}`);
     this.editor.$blockScrolling = Infinity;
+    new Bind(this.name, this.mode);
+    loaded(this.name);
   }
   get text() {
     return this.editor.getValue();
