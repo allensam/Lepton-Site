@@ -19,3 +19,4 @@ Rails.application.config.assets.precompile += %w( editors/css-page.js )
 Rails.application.config.assets.precompile += %w( templates/* )
 Rails.application.config.assets.paths << 'assets'
 # Rails.application.config.assets.precompile += %w( init.js )
+
