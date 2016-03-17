@@ -12,4 +12,7 @@
 !/log/.keep
 /tmp
 /config/database.yml
-.idea/
+
+#ignore editor stuff
+.idea
+
